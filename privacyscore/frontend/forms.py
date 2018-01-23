@@ -77,7 +77,7 @@ class CreateListForm(forms.ModelForm):
             if row[0] and not row[0].startswith(('http', 'https')):
                 row[0] = 'http://' + row[0]
             try:
-                validate_url(row[0])
+                validate_url(row[0].strip())
             except ValidationError:
                 invalid_rows.add(i)
             table[i] = row
