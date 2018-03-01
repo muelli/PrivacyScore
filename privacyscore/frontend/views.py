@@ -4,6 +4,7 @@ import re
 from collections import Counter, defaultdict
 from typing import Iterable, Union
 from urllib.parse import urlencode
+from datetime import datetime
 
 from django.conf import settings
 from django.contrib import messages
@@ -328,6 +329,7 @@ def view_scan_list(request: HttpRequest, scan_list_id: int, format: str = 'html'
         output = {'sites': [], 'blacklisted_sites': []}
         for site_no, site in _enumerate_sites(sites, start=1):
             output['sites'].append({
+                'id': site.pk,
                 'position': site_no,
                 'url': site.url,
                 'columns': [x.value for x in site.ordered_column_values],
@@ -335,6 +337,7 @@ def view_scan_list(request: HttpRequest, scan_list_id: int, format: str = 'html'
             })
         for site_no, site in _enumerate_sites(blacklisted_sites, start=1):
             output['sites'].append({
+                'id': site.pk,
                 'position': site_no,
                 'url': site.url,
                 'columns': [x.value for x in site.ordered_column_values],
@@ -586,12 +589,30 @@ def scan_list_csv(request: HttpRequest, scan_list_id: int) -> HttpResponse:
 
 
 def site_result_json(request: HttpRequest, site_id: int) -> HttpResponse:
-    site = get_object_or_404(Site.objects.annotate_most_recent_scan_result(), pk=site_id)
-    scan_result = site.last_scan__result if site.last_scan__result else {}
+    if 'at' in request.GET:
+        # Check that the site even exists
+        site = get_object_or_404(Site, pk=site_id)
+
+        # TODO sanity check timestamp
+        try:
+            timestamp = datetime.strptime(request.GET['at'], "%Y-%m-%d")
+        except:
+            return render(request, 'frontend/site_result_json.html', {'site': site, 'highlighted_code': 'Incorrect timestamp format'})
+        try:
+            scan = Scan.objects.filter(site=site).filter(end__lte=timestamp).order_by('-end').first()
+            scan_result = ScanResult.objects.get(scan=scan).result
+        except Exception as e:
+            scan_result = None
+    else:
+        site = get_object_or_404(Site.objects.annotate_most_recent_scan_result(), pk=site_id)
+        scan_result = site.last_scan__result if site.last_scan__result else {}
     if 'raw' in request.GET:
         return JsonResponse(scan_result)
     code = json.dumps(scan_result, indent=2)
-    highlighted_code = mark_safe(highlight(code, JsonLexer(), HtmlFormatter()))
+    if scan_result is not None:
+        highlighted_code = mark_safe(highlight(code, JsonLexer(), HtmlFormatter()))
+    else:
+        highlighted_code = 'No scan data found for these parameters'
     return render(request, 'frontend/site_result_json.html', {
         'site': site,
         'highlighted_code': highlighted_code
@@ -626,24 +647,24 @@ def faq(request: HttpRequest):
     num_scans  = Site.objects.filter(scans__isnull=False).count()
     num_scanning_sites = Scan.objects.filter(end__isnull=True).count()
 
-    query = '''SELECT
-        COUNT(jsonb_array_length("result"->'leaks'))
-        FROM backend_scanresult
-        WHERE backend_scanresult.scan_id IN (
-            SELECT backend_site.last_scan_id
-            FROM backend_site
-            WHERE backend_site.last_scan_id IS NOT NULL)
-        AND jsonb_array_length("result"->'leaks') > 0'''
-    
-    with connection.cursor() as cursor:
-        cursor.execute(query)
-        num_sites_failing_serverleak = cursor.fetchone()[0]
+    # query = '''SELECT
+    #     COUNT(jsonb_array_length("result"->'leaks'))
+    #     FROM backend_scanresult
+    #     WHERE backend_scanresult.scan_id IN (
+    #         SELECT backend_site.last_scan_id
+    #         FROM backend_site
+    #         WHERE backend_site.last_scan_id IS NOT NULL)
+    #     AND jsonb_array_length("result"->'leaks') > 0'''
+    # 
+    # with connection.cursor() as cursor:
+    #     cursor.execute(query)
+    #     num_sites_failing_serverleak = cursor.fetchone()[0]
         
     return render(request, 'frontend/faq.html', {
         'num_scanning_sites': num_scanning_sites,
         'num_scans':  num_scans,
         'num_sites': Site.objects.count(),
-        'num_sites_failing_serverleak': num_sites_failing_serverleak
+        # 'num_sites_failing_serverleak': num_sites_failing_serverleak
     })
 
 
