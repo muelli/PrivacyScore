@@ -112,7 +112,8 @@ CACHES = {
 # No memcache for us: {{ privacyscore__install_memcache }}
 {% endif %}
 
-CACHE_DEFAULT_TIMEOUT_SECONDS = 1800
+SITE_LIST_CACHE_TIMEOUT = 3600 * 24 * 14
+SITE_CACHE_TIMEOUT = 3600 * 24
 
 
 # Password validation
