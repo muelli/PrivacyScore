@@ -1434,27 +1434,27 @@ CHECKS['ssl']['web_vuln_crime'] = {
     'missing': None,
 }
 # Check for BREACH
-# vulnerable: bad
+# vulnerable: neutral
 # Else: good
 CHECKS['ssl']['web_vuln_breach'] = {
     'keys': {'web_vulnerabilities', 'web_has_ssl'},
     'rating': lambda **keys: {
         'description': _('BREACH attack: The server does not seem to be vulnerable.'),
-        'classification': Rating('good'),
+        'classification': Rating('good', influences_ranking=False),
         'details_list': None,
     } if keys["web_vulnerabilities"].get('breach', {}).get('severity') in ("OK", "INFO") else { # cf. note @ rc4
         'description': _('BREACH attack: The server seems to be vulnerable.'),
-        'classification': Rating('bad'),
+        'classification': Rating('neutral', influences_ranking=False),
         'details_list': None,
         'finding': keys["web_vulnerabilities"].get('breach').get('finding'),
         'severity': keys["web_vulnerabilities"].get('breach').get('severity'),
     } if keys["web_vulnerabilities"].get('breach') else {
         'description': _('The check for the BREACH vulnerability did not return a result.'),
-        'classification': Rating('neutral'),
+        'classification': Rating('neutral', influences_ranking=False),
         'details_list': None
     } if keys['web_has_ssl'] else {
         'description': _('Skipping to check for BREACH vulnerability because the server does not offer HTTPS.'),
-        'classification': Rating('neutral'),
+        'classification': Rating('neutral', influences_ranking=False),
         'details_list': None
     },
     'missing': None,
@@ -1658,11 +1658,11 @@ CHECKS['ssl']['web_vuln_beast_proto'] = {
         'severity': keys["web_vulnerabilities"].get('cbc_ssl3', {}).get('severity',"") + " " + keys["web_vulnerabilities"].get('cbc_tls1', {}).get('severity',""),
     } if keys["web_vulnerabilities"].get('cbc_ssl3') or keys["web_vulnerabilities"].get('cbc_tls1') else {
         'description': _('The check for CBC ciphers in the SSL 3.0 and TLS 1.0 protocols (BEAST attack) did not return a result.'),
-        'classification': Rating('neutral'),
+        'classification': Rating('neutral', influences_ranking=False),
         'details_list': None
     } if keys['web_has_ssl'] else {
         'description': _('Skipping check for CBC ciphers in the SSL 3.0 and TLS 1.0 protocols (BEAST attack) because the server does not offer HTTPS.'),
-        'classification': Rating('neutral'),
+        'classification': Rating('neutral', influences_ranking=False),
         'details_list': None
     },
     'missing': None,
@@ -1674,21 +1674,21 @@ CHECKS['ssl']['web_vuln_beast'] = {
     'keys': {'web_vulnerabilities', 'web_has_ssl'},
     'rating': lambda **keys: {
         'description': _('BEAST attack: The server does not seem to be vulnerable.'),
-        'classification': Rating('good'),
+        'classification': Rating('good', influences_ranking=False),
         'details_list': None,
     } if keys["web_vulnerabilities"].get('beast', {}).get('severity') in ("OK", "INFO") else { # cf. note @ rc4
         'description': _('BEAST attack: The server seems to be vulnerable.'),
-        'classification': Rating('bad'),
+        'classification': Rating('neutral', influences_ranking=False),
         'details_list': None,
         'finding': keys["web_vulnerabilities"].get('beast').get('finding'),
         'severity': keys["web_vulnerabilities"].get('beast').get('severity'),
     } if keys["web_vulnerabilities"].get('beast') else {
         'description': _('The check for the BEAST vulnerability did not return a result.'),
-        'classification': Rating('neutral'),
+        'classification': Rating('neutral', influences_ranking=False),
         'details_list': None
     } if keys['web_has_ssl'] else {
         'description': _('Skipping check for the BEAST vulnerability because the server does not offer HTTPS.'),
-        'classification': Rating('neutral'),
+        'classification': Rating('neutral', influences_ranking=False),
         'details_list': None
     },
     'missing': None,
@@ -1700,21 +1700,21 @@ CHECKS['ssl']['web_vuln_lucky13'] = {
     'keys': {'web_vulnerabilities', 'web_has_ssl'},
     'rating': lambda **keys: {
         'description': _('LUCKY13 attack: The server does not seem to be vulnerable'),
-        'classification': Rating('good'),
+        'classification': Rating('good', influences_ranking=False),
         'details_list': None,
     } if keys["web_vulnerabilities"].get('lucky13', {}).get('severity') in ("OK", "INFO") else { # cf. note @ rc4
         'description': _('LUCKY13 attack: The server seems to be vulnerable.'),
-        'classification': Rating('bad'),
+        'classification': Rating('nautral', influences_ranking=False),
         'details_list': None,
         'finding': keys["web_vulnerabilities"].get('lucky13').get('finding'),
         'severity': keys["web_vulnerabilities"].get('lucky13').get('severity'),
     } if keys["web_vulnerabilities"].get('lucky13') else {
         'description': _('The check for the LUCKY13 vulnerability did not return a result.'),
-        'classification': Rating('neutral'),
+        'classification': Rating('neutral', influences_ranking=False),
         'details_list': None
     } if keys['web_has_ssl'] else {
         'description': _('Skipping check for the LUCKY13 vulnerability because the server does not offer HTTPS.'),
-        'classification': Rating('neutral'),
+        'classification': Rating('neutral', influences_ranking=False),
         'details_list': None
     },
     'missing': None,
@@ -2890,7 +2890,7 @@ CHECKS['mx']['mx_vuln_beast_proto'] = {
     'missing': None,
 }
 # Check for BEAST
-# vulnerable: bad
+# vulnerable: neutral
 # Else: good
 CHECKS['mx']['mx_vuln_beast'] = {
     'keys': {'mx_vulnerabilities', 'mx_has_ssl'},
@@ -2916,7 +2916,7 @@ CHECKS['mx']['mx_vuln_beast'] = {
     'missing': None,
 }
 # Check for Lucky13
-# vulnerable: bad
+# vulnerable: neutral
 # Else: good
 CHECKS['mx']['mx_vuln_lucky13'] = {
     'keys': {'mx_vulnerabilities', 'mx_has_ssl'},
@@ -3806,7 +3806,9 @@ CHECKS['mx']['mx_vuln_crime']['labels'] = ['reliable']
 
 CHECKS['ssl']['web_vuln_breach']['title'] = "Check for protection against BREACH attack"
 CHECKS['ssl']['web_vuln_breach']['longdesc'] = """<p>Description will be added soon.</p>
-<p><strong>Conditions for passing:</strong> Test passes if the server is not vulnerable to this bug. The result is neutral if the server does not offer encryption at all or if the server cannot be reached.</p>
+<p><strong>Conditions for passing:</strong> Test passes if the server is not vulnerable to this bug.
+As mitigations exist that cannot be detected automatically, the result will be neutral if the attack is detected to be present.
+The result is also neutral if the server does not offer encryption at all or if the server cannot be reached.</p>
 <p><strong>Reliability: reliable.</strong></p>
 <p><strong>Potential scan errors:</strong> None that we are aware of.</p>
 <p>Scan module: <a href="https://testssl.sh" target=_blank>testssl</a></p>
@@ -3947,13 +3949,15 @@ CHECKS['mx']['mx_vuln_beast_proto']['longdesc'] = """<p>Description will be adde
 </ul>
 """ 
 CHECKS['ssl']['web_vuln_beast_proto']['labels'] = \
-CHECKS['mx']['mx_vuln_beast_proto']['labels'] = ['reliable']
+CHECKS['mx']['mx_vuln_beast_proto']['labels'] = ['informational']
 
 CHECKS['ssl']['web_vuln_beast']['title'] = \
 CHECKS['mx']['mx_vuln_beast']['title'] = "Check for protection against BEAST attack"
 CHECKS['ssl']['web_vuln_beast']['longdesc'] = \
 CHECKS['mx']['mx_vuln_beast']['longdesc'] = """<p>Description will be added soon.</p>
-<p><strong>Conditions for passing:</strong> Test passes if the server is not vulnerable to this bug. The result is neutral if the server does not offer encryption at all or if the server cannot be reached.</p>
+<p><strong>Conditions for passing:</strong> Test passes if the server is not vulnerable to this bug.
+ As no mitigations exist that do not break backwards-compatibility with most old clients, we will not actively penalize servers for this vulnerability at the moment, however this may change in the future.
+The result is also neutral if the server does not offer encryption at all or if the server cannot be reached.</p>
 <p><strong>Reliability: reliable.</strong></p>
 <p><strong>Potential scan errors:</strong> None that we are aware of.</p>
 <p>Scan module: <a href="https://testssl.sh" target=_blank>testssl</a></p>
@@ -3963,13 +3967,15 @@ CHECKS['mx']['mx_vuln_beast']['longdesc'] = """<p>Description will be added soon
 </ul>
 """ 
 CHECKS['ssl']['web_vuln_beast']['labels'] = \
-CHECKS['mx']['mx_vuln_beast']['labels'] = ['reliable']
+CHECKS['mx']['mx_vuln_beast']['labels'] = ['informational']
 
 CHECKS['ssl']['web_vuln_lucky13']['title'] = \
 CHECKS['mx']['mx_vuln_lucky13']['title'] = "Check for protection against LUCKY13 attack"
 CHECKS['ssl']['web_vuln_lucky13']['longdesc'] = \
 CHECKS['mx']['mx_vuln_lucky13']['longdesc'] = """<p>Description will be added soon.</p>
-<p><strong>Conditions for passing:</strong> Test passes if the server is not vulnerable to this bug. The result is neutral if the server does not offer encryption at all or if the server cannot be reached.</p>
+<p><strong>Conditions for passing:</strong> Test passes if the server is not vulnerable to this bug.
+As mitigations exist that cannot be detected automatically, the result will be neutral if the attack is detected to be present.
+The result is also neutral if the server does not offer encryption at all or if the server cannot be reached.</p>
 <p><strong>Reliability: reliable.</strong></p>
 <p><strong>Potential scan errors:</strong> None that we are aware of.</p>
 <p>Scan module: <a href="https://testssl.sh" target=_blank>testssl</a></p>
@@ -3979,7 +3985,7 @@ CHECKS['mx']['mx_vuln_lucky13']['longdesc'] = """<p>Description will be added so
 </ul>
 """ 
 CHECKS['ssl']['web_vuln_lucky13']['labels'] = \
-CHECKS['mx']['mx_vuln_lucky13']['labels'] = ['reliable']
+CHECKS['mx']['mx_vuln_lucky13']['labels'] = ['informational']
 
 CHECKS['mx']['has_mx']['title'] = "Check if domain of website lists an e-mail server"
 CHECKS['mx']['has_mx']['longdesc'] = """<p>In many cases online services can be reached via e-mail at the same domain as the website. This test checks if the domain entry of the website lists an e-mail server (MX record).</p>
