@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -103,7 +104,8 @@ CACHES = {
         }
     }
 }
-CACHE_DEFAULT_TIMEOUT_SECONDS = 1800
+SITE_LIST_CACHE_TIMEOUT = 3600 * 24 * 14
+SITE_CACHE_TIMEOUT = 3600 * 24
 
 
 # Password validation
@@ -128,7 +130,15 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
+
+LANGUAGES = (
+    ('en', 'English'),
+    ('de', 'Deutsch'),
+)
+LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'UTC'
 

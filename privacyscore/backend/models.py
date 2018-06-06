@@ -210,7 +210,7 @@ class SiteQuerySet(models.QuerySet):
                     Site=Site._meta.db_table,
                     Site_ScanLists=Site.scan_lists.through._meta.db_table), ()))
 
-    def annotate_most_recent_scan_result(self) -> 'SiteQuerSet':
+    def annotate_most_recent_scan_result(self) -> 'SiteQuerySet':
         return self.annotate(last_scan__result=RawSQL('''
         SELECT "{ScanResult}"."result"
         FROM "{ScanResult}"
@@ -466,6 +466,9 @@ class RawScanResult(models.Model):
     mime_type = models.CharField(max_length=80)
     file_name = models.CharField(max_length=80, null=True, blank=True)
     data = models.BinaryField(null=True, blank=True)
+
+    def get_data_as_string(self):
+        return bytes(self.retrieve()).decode()
 
     def __str__(self) -> str:
         return '{}: {}'.format(str(self.scan), self.test)

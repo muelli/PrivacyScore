@@ -4,6 +4,7 @@ import re
 from collections import Counter, defaultdict
 from typing import Iterable, Union
 from urllib.parse import urlencode
+from datetime import datetime
 
 from django.conf import settings
 from django.contrib import messages
@@ -14,6 +15,7 @@ from django.db import transaction
 from django.db.models import Count, F, Prefetch, Q
 from django.http import HttpRequest, HttpResponse, HttpResponseNotFound, JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render, reverse
+from django.template.response import TemplateResponse
 from django.utils.safestring import mark_safe
 from django.utils.translation import ugettext_lazy as _
 from django.views.decorators.http import require_POST
@@ -25,6 +27,7 @@ from pygments.formatters import HtmlFormatter
 from privacyscore.backend.models import ListColumn, ListColumnValue, ListTag,  Scan, ScanList, Site, ScanResult
 from privacyscore.evaluation.result_groups import DEFAULT_GROUP_ORDER, RESULT_GROUPS
 from privacyscore.evaluation.site_evaluation import UnrateableSiteEvaluation
+from privacyscore.flexcache import flexcache_view
 from privacyscore.frontend.forms import SingleSiteForm, CreateListForm
 from privacyscore.frontend.models import Spotlight
 from privacyscore.utils import normalize_url
@@ -208,12 +211,20 @@ def scan(request: HttpRequest) -> HttpResponse:
     return render(request, 'frontend/scan.html')
 
 
-def view_scan_list(request: HttpRequest, scan_list_id: int, format: str = 'html') -> HttpResponse:
+def view_scan_list(request: HttpRequest, scan_list_id: int, format: str = 'html'):
     scan_list = get_object_or_404(
         ScanList.objects.annotate_running_scans_count().prefetch_columns(), pk=scan_list_id)
     scan_list.views = F('views') + 1
     scan_list.save(update_fields=('views',))
 
+    last_scan_pk = scan_list.last_scan.pk if scan_list.last_scan else 0
+    cache_prefix = 'view_scan_list:{}:{}'.format(scan_list.pk, last_scan_pk)
+    cached_view = flexcache_view(render_scan_list_cachable, cache_prefix,
+                                 timeout=settings.SITE_LIST_CACHE_TIMEOUT)
+    return cached_view(request, scan_list, format)
+
+
+def render_scan_list_cachable(request: HttpRequest, scan_list, format: str = 'html'):
     column_choices = [(None, _('- None -'))] + list(enumerate(x.name for x in scan_list.ordered_columns))
 
     class ConfigurationForm(forms.Form):
@@ -248,7 +259,7 @@ def view_scan_list(request: HttpRequest, scan_list_id: int, format: str = 'html'
             'categories': ','.join(category_order),
         })
         return redirect('{}?{}'.format(
-            reverse('frontend:view_scan_list', args=(scan_list_id,)),
+            reverse('frontend:view_scan_list', args=(scan_list.pk,)),
             urlencode(url_params)))
     category_names = [{
         'short_name': RESULT_GROUPS[category]['short_name'],
@@ -257,8 +268,6 @@ def view_scan_list(request: HttpRequest, scan_list_id: int, format: str = 'html'
         'right': ','.join(_move_element(category_order, category, 1))
     } for category in category_order]
 
-    #sites = cache.get('scan_list_{}:evaluated_sites'.format(scan_list.pk))
-    #if sites is None:
     sites = scan_list.sites.annotate_most_recent_scan_error_count() \
         .annotate_most_recent_scan_start().annotate_most_recent_scan_end_or_null() \
         .annotate_most_recent_scan_result().prefetch_column_values(scan_list) \
@@ -275,13 +284,7 @@ def view_scan_list(request: HttpRequest, scan_list_id: int, format: str = 'html'
         else:
             site.evaluated = UnrateableSiteEvaluation()
 
-    #cache.set(
-    #    'scan_list_{}:evaluated_sites'.format(scan_list.pk),
-    #    sites,
-    #    settings.CACHE_DEFAULT_TIMEOUT_SECONDS)
-
     sites = sorted(sites, key=lambda v: v.evaluated, reverse=True)
-
 
     # Sorting and grouping by attributes
     sort_by = None
@@ -298,11 +301,6 @@ def view_scan_list(request: HttpRequest, scan_list_id: int, format: str = 'html'
 
     blacklisted_sites = [site for site in sites if site.scannable() == Site.SCAN_BLACKLISTED]
     sites = [site for site in sites if site.scannable() != Site.SCAN_BLACKLISTED]
-
-    print("BLACKLIST:")
-    print(blacklisted_sites)
-    print("REST:")
-    print(sites)
 
     groups = None
     group_attr = None
@@ -328,6 +326,7 @@ def view_scan_list(request: HttpRequest, scan_list_id: int, format: str = 'html'
         output = {'sites': [], 'blacklisted_sites': []}
         for site_no, site in _enumerate_sites(sites, start=1):
             output['sites'].append({
+                'id': site.pk,
                 'position': site_no,
                 'url': site.url,
                 'columns': [x.value for x in site.ordered_column_values],
@@ -335,6 +334,7 @@ def view_scan_list(request: HttpRequest, scan_list_id: int, format: str = 'html'
             })
         for site_no, site in _enumerate_sites(blacklisted_sites, start=1):
             output['sites'].append({
+                'id': site.pk,
                 'position': site_no,
                 'url': site.url,
                 'columns': [x.value for x in site.ordered_column_values],
@@ -358,7 +358,7 @@ def view_scan_list(request: HttpRequest, scan_list_id: int, format: str = 'html'
             writer.writerow(columns)
         return resp
     elif format == 'html':
-        return render(request, 'frontend/view_scan_list.html', {
+        return TemplateResponse(request, 'frontend/view_scan_list.html', {
             'scan_list': scan_list,
             'sites_count': len(sites) + len(blacklisted_sites),
             'blacklisted_sites_count': len(blacklisted_sites),
@@ -489,7 +489,15 @@ def view_site(request: HttpRequest, site_id: int) -> HttpResponse:
             .annotate_most_recent_scan_result(), pk=site_id)
     site.views = F('views') + 1
     site.save(update_fields=('views',))
-    
+
+    last_scan_pk = site.last_scan.pk if site.last_scan else 0
+    cache_key = 'view_site:{}:{}'.format(site.pk, last_scan_pk)
+    cached_view = flexcache_view(render_site_cachable, cache_key, timeout=settings.SITE_CACHE_TIMEOUT)
+    return cached_view(request, site)
+
+
+def render_site_cachable(request: HttpRequest, site) -> TemplateResponse:
+    """Render a site and its most recent scan result (if any), used by view_site"""
     num_scans = Scan.objects.filter(site_id=site.pk).count()
     scan_lists = ScanList.objects.filter(private=False, sites=site.pk)
 
@@ -505,6 +513,7 @@ def view_site(request: HttpRequest, site_id: int) -> HttpResponse:
     res = {}
     
     res['final_url'] = results.get('final_url', '–')
+    res['final_https_url'] = results.get('final_https_url')
 
     if results.get('mx_records') and results.get('mx_records')[0] and results.get('mx_records')[0][1]:
         mxrec = results.get('mx_records')[0][1]
@@ -513,6 +522,10 @@ def view_site(request: HttpRequest, site_id: int) -> HttpResponse:
      
     res['mx_record'] = mxrec
     
+    res['reachable'] = results.get('reachable')
+    res['dns_error'] = results.get('dns_error')
+    res['http_error'] = results.get('http_error')
+    res['https_error'] = results.get('https_error')
     
     return render(request, 'frontend/view_site.html', {
         'site': site,
@@ -581,12 +594,30 @@ def scan_list_csv(request: HttpRequest, scan_list_id: int) -> HttpResponse:
 
 
 def site_result_json(request: HttpRequest, site_id: int) -> HttpResponse:
-    site = get_object_or_404(Site.objects.annotate_most_recent_scan_result(), pk=site_id)
-    scan_result = site.last_scan__result if site.last_scan__result else {}
+    if 'at' in request.GET:
+        # Check that the site even exists
+        site = get_object_or_404(Site, pk=site_id)
+
+        # TODO sanity check timestamp
+        try:
+            timestamp = datetime.strptime(request.GET['at'], "%Y-%m-%d")
+        except:
+            return render(request, 'frontend/site_result_json.html', {'site': site, 'highlighted_code': 'Incorrect timestamp format'})
+        try:
+            scan = Scan.objects.filter(site=site).filter(end__lte=timestamp).order_by('-end').first()
+            scan_result = ScanResult.objects.get(scan=scan).result
+        except Exception as e:
+            scan_result = None
+    else:
+        site = get_object_or_404(Site.objects.annotate_most_recent_scan_result(), pk=site_id)
+        scan_result = site.last_scan__result if site.last_scan__result else {}
     if 'raw' in request.GET:
         return JsonResponse(scan_result)
     code = json.dumps(scan_result, indent=2)
-    highlighted_code = mark_safe(highlight(code, JsonLexer(), HtmlFormatter()))
+    if scan_result is not None:
+        highlighted_code = mark_safe(highlight(code, JsonLexer(), HtmlFormatter()))
+    else:
+        highlighted_code = 'No scan data found for these parameters'
     return render(request, 'frontend/site_result_json.html', {
         'site': site,
         'highlighted_code': highlighted_code
@@ -621,24 +652,24 @@ def faq(request: HttpRequest):
     num_scans  = Site.objects.filter(scans__isnull=False).count()
     num_scanning_sites = Scan.objects.filter(end__isnull=True).count()
 
-    query = '''SELECT
-        COUNT(jsonb_array_length("result"->'leaks'))
-        FROM backend_scanresult
-        WHERE backend_scanresult.scan_id IN (
-            SELECT backend_site.last_scan_id
-            FROM backend_site
-            WHERE backend_site.last_scan_id IS NOT NULL)
-        AND jsonb_array_length("result"->'leaks') > 0'''
-    
-    with connection.cursor() as cursor:
-        cursor.execute(query)
-        num_sites_failing_serverleak = cursor.fetchone()[0]
+    # query = '''SELECT
+    #     COUNT(jsonb_array_length("result"->'leaks'))
+    #     FROM backend_scanresult
+    #     WHERE backend_scanresult.scan_id IN (
+    #         SELECT backend_site.last_scan_id
+    #         FROM backend_site
+    #         WHERE backend_site.last_scan_id IS NOT NULL)
+    #     AND jsonb_array_length("result"->'leaks') > 0'''
+    # 
+    # with connection.cursor() as cursor:
+    #     cursor.execute(query)
+    #     num_sites_failing_serverleak = cursor.fetchone()[0]
         
     return render(request, 'frontend/faq.html', {
         'num_scanning_sites': num_scanning_sites,
         'num_scans':  num_scans,
         'num_sites': Site.objects.count(),
-        'num_sites_failing_serverleak': num_sites_failing_serverleak
+        # 'num_sites_failing_serverleak': num_sites_failing_serverleak
     })
 
 
