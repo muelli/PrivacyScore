@@ -2896,21 +2896,21 @@ CHECKS['mx']['mx_vuln_beast'] = {
     'keys': {'mx_vulnerabilities', 'mx_has_ssl'},
     'rating': lambda **keys: {
         'description': _('BEAST attack: The server does not seem to be vulnerable.'),
-        'classification': Rating('good'),
+        'classification': Rating('good', influences_ranking=False),
         'details_list': None,
     } if keys["mx_vulnerabilities"].get('beast', {}).get('severity') in ("OK", "INFO") else { # cf. note @ rc4
         'description': _('BEAST attack: The server seems to be vulnerable.'),
-        'classification': Rating('bad'),
+        'classification': Rating('neutral', influences_ranking=False),
         'details_list': None,
         'finding': keys["mx_vulnerabilities"].get('beast').get('finding'),
         'severity': keys["mx_vulnerabilities"].get('beast').get('severity'),
     } if keys["mx_vulnerabilities"].get('beast') else {
         'description': _('The check for the BEAST vulnerability did not return a result.'),
-        'classification': Rating('neutral'),
+        'classification': Rating('neutral', influences_ranking=False),
         'details_list': None
     } if keys['mx_has_ssl'] else {
         'description': _('Skipping check for the BEAST vulnerability because the server does not offer HTTPS.'),
-        'classification': Rating('neutral'),
+        'classification': Rating('neutral', influences_ranking=False),
         'details_list': None
     },
     'missing': None,
@@ -2922,21 +2922,21 @@ CHECKS['mx']['mx_vuln_lucky13'] = {
     'keys': {'mx_vulnerabilities', 'mx_has_ssl'},
     'rating': lambda **keys: {
         'description': _('LUCKY13 attack: The server does not seem to be vulnerable'),
-        'classification': Rating('good'),
+        'classification': Rating('good', influences_ranking=False),
         'details_list': None,
     } if keys["mx_vulnerabilities"].get('lucky13', {}).get('severity') in ("OK", "INFO") else { # cf. note @ rc4
         'description': _('LUCKY13 attack: The server seems to be vulnerable.'),
-        'classification': Rating('bad'),
+        'classification': Rating('neutral', influences_ranking=False),
         'details_list': None,
         'finding': keys["mx_vulnerabilities"].get('lucky13').get('finding'),
         'severity': keys["mx_vulnerabilities"].get('lucky13').get('severity'),
     } if keys["mx_vulnerabilities"].get('lucky13') else {
         'description': _('The check for the LUCKY13 vulnerability did not return a result.'),
-        'classification': Rating('neutral'),
+        'classification': Rating('neutral', influences_ranking=False),
         'details_list': None
     } if keys['mx_has_ssl'] else {
         'description': _('Skipping check for the LUCKY13 vulnerability because the server does not offer HTTPS.'),
-        'classification': Rating('neutral'),
+        'classification': Rating('neutral', influences_ranking=False),
         'details_list': None
     },
     'missing': None,
