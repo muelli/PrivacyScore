@@ -179,7 +179,7 @@ CELERY_QUEUES = (
 
 # FIXME: Soft-code these time related settings
 SCAN_REQUIRED_TIME_BEFORE_NEXT_SCAN = timedelta(minutes=28)
-SCAN_SUITE_TIMEOUT_SECONDS = 420
+SCAN_SUITE_TIMEOUT_SECONDS = 480
 SCAN_TOTAL_TIMEOUT = timedelta(hours=8)
 SCAN_TEST_BASEPATH = os.path.join(BASE_DIR, 'tests')
 SCAN_LISTS_PER_PAGE = 30
