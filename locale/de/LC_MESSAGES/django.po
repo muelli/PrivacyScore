@@ -1,0 +1,2250 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-10 06:34+0000\n"
+"PO-Revision-Date: 2018-04-10 08:35+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: privacyscore/evaluation/default_checks.py:28
+msgid ""
+"The website scan has encountered an error: OpenWPM timed out. The results "
+"shown in this category are invalid."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:33
+msgid ""
+"The website scan has encountered an error: OpenWPM has not returned a "
+"result. The results shown in this category are invalid."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:44
+msgid "The site does not use any third parties."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:49
+#, python-format
+msgid "The site is using one third party."
+msgid_plural "The site is using %(count)d third parties."
+msgstr[0] ""
+msgstr[1] ""
+
+#: privacyscore/evaluation/default_checks.py:63
+msgid "The site does not use any known tracking- or advertising companies."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:68
+#, python-format
+msgid "The site is using one known tracking- or advertising company."
+msgid_plural ""
+"The site is using %(count)d known tracking- or advertising companies."
+msgstr[0] ""
+msgstr[1] ""
+
+#: privacyscore/evaluation/default_checks.py:82
+msgid "The website itself is not setting any cookies."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:86
+#, python-format
+msgid ""
+"The website itself is setting %(short)d short-term and %(long)d long-term "
+"cookies, and %(flash)d flash cookies."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:101
+msgid "No one else is setting any cookies."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:105
+#, python-format
+msgid ""
+"Third parties are setting %(short)d short-term, %(long)d long-term and "
+"%(flash)d flash cookies, %(notrack)d of which are set by %(uniqtrack)d known "
+"trackers."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:121
+msgid "The site uses Google Analytics."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:125
+msgid "The site does not use Google Analytics."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:138
+msgid ""
+"Not checking if Google Analytics data is being anonymized, as the site does "
+"not use Google Analytics."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:142
+msgid ""
+"The site uses Google Analytics without the AnonymizeIP Privacy extension."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:146
+msgid ""
+"The site uses Google Analytics, however it instructs Google to store only "
+"anonymized IPs."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:158
+msgid "web servers"
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:166
+msgid "mail servers"
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:175
+msgid ""
+"The geo-location(s) of the web server(s) and the mail server(s) are not "
+"identical."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:180
+msgid ""
+"The geo-location(s) of the web server(s) and the mail server(s) are "
+"identical."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:184
+msgid ""
+"Not checking if web and mail servers are in the same country, as there are "
+"no mail servers."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:201
+msgid ""
+"The serverleaks check was skipped because the site is not reachable or the "
+"OpenWPM scan failed."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:205
+msgid "The site does not disclose internal system information at usual paths."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:209
+msgid ""
+"The site discloses internal system information that should not be available."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:213
+msgid "The scan failed or timed out."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:224
+msgid "The site sets a Content-Security-Policy (CSP) header."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:229
+msgid "The site does not set a Content-Security-Policy (CSP) header."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:240
+msgid "The site sets a X-Frame-Options (XFO) header."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:245
+msgid "The site does not set a X-Frame-Options (XFO) header."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:256
+msgid "The site sets a X-XSS-Protection  header."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:261
+msgid "The site does not set a X-XSS-Protection header."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:272
+msgid "The site sets a X-Content-Type-Options header."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:277
+msgid "The site does not set a X-Content-Type-Options header."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:289
+msgid "The site sets a Referrer-Policy header."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:294
+msgid "The site does not set a referrer-policy header."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:310
+msgid ""
+"The SSL scan experienced an unexpected error. Please rescan and contact us "
+"if the problem persists."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:322
+msgid "The website does not offer an encrypted (HTTPS) version."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:327
+msgid ""
+"The SSL scan experienced a problem and had to be aborted, some SSL checks "
+"were not performed."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:339
+msgid ""
+"The site does not use HTTPS by default but it makes available the same "
+"content via HTTPS upon request."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:346
+msgid ""
+"The web server does not support HTTPS by default. It hosts an HTTPS site, "
+"but it does not serve the same content over HTTPS that is offered via HTTP."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:353
+msgid ""
+"Not comparing between HTTP and HTTPS version, as the website was scanned "
+"only over HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:365
+msgid "The website uses a valid security certificate."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:369
+msgid "Not checking SSL certificate, as the server does not offer SSL"
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:373
+msgid "Server uses an invalid SSL certificate."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:386
+msgid ""
+"Not checking if website automatically redirects visitors to the HTTPS "
+"version, as OpenWPM scan failed (e.g., because the site blocked our request)."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:390
+msgid "The website redirects visitors to the secure (HTTPS) version."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:394
+msgid ""
+"Not checking if websites automatically redirects to HTTPS version, as the "
+"provided URL already was HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:398
+msgid ""
+"The website does not redirect visitors to the secure (HTTPS) version, even "
+"though one is available."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:402
+msgid ""
+"Not testing for forward to HTTPS, as the webserver does not offer a well-"
+"configured HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:407
+msgid ""
+"No functional HTTPS version found, so not checking for automated forwarding "
+"to HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:418
+msgid "The web server redirects to HTTP if content is requested via HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:422
+msgid ""
+"Not checking for HTTPS->HTTP redirection, as the server does not offer HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:426
+msgid ""
+"The web server does not redirect to HTTP if content is requested via HTTPS"
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:438
+msgid "The web server is supporting perfect forward secrecy."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:442
+msgid "The web server is not supporting perfect forward secrecy."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:455
+msgid "Not checking for HSTS support, as the server does not offer HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:459
+msgid "The server uses HSTS to prevent insecure requests."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:463
+msgid "The site is not using HSTS to prevent insecure requests."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:476
+msgid "The server is not using HSTS, so not checking HSTS validity duration."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:480
+msgid "The site uses HSTS with a sufficiently long duration."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:484
+msgid "The validity of the HSTS header is too short."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:497
+msgid ""
+"Not checking for HSTS Preloading support, as the server does not offer HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:501
+msgid "The server is ready for HSTS preloading."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:505
+msgid "The site is not using HSTS preloading to prevent insecure requests."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:509
+msgid "Not checking for HSTS preloading, as the website does not offer HSTS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:522
+msgid ""
+"Not checking for HSTS Preloading list inclusion, as the server does not "
+"offer HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:526
+msgid "The server is part of the Chrome HSTS preload list."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:530
+msgid ""
+"The server is ready for HSTS preloading, but not in the preloading database "
+"yet."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:534
+msgid ""
+"Not checking for inclusion in HSTS preloading lists, as the website does not "
+"advertise it."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:538
+msgid ""
+"Not checking for inclusion in HSTS preloading lists, as the website does not "
+"offer HSTS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:551
+msgid ""
+"The site uses Public Key Pinning to prevent attackers from using invalid "
+"certificates."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:555
+msgid ""
+"The site is not using Public Key Pinning to prevent attackers from using "
+"invalid certificates."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:559
+msgid "Not checking for HPKP support, as the server does not offer HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:572
+#: privacyscore/evaluation/default_checks.py:1060
+msgid "The server does not support SSLv2."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:576
+#: privacyscore/evaluation/default_checks.py:1064
+msgid "The server supports SSLv2."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:580
+msgid "Not checking for SSLv2 support, as the server does not offer HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:593
+#: privacyscore/evaluation/default_checks.py:1081
+msgid "The server does not support SSLv3."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:597
+#: privacyscore/evaluation/default_checks.py:1085
+msgid "The server supports SSLv3."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:601
+msgid "Not checking for SSLv3 support, as the server does not offer HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:613
+#: privacyscore/evaluation/default_checks.py:1101
+msgid "The server supports TLS 1.0."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:617
+#: privacyscore/evaluation/default_checks.py:1105
+msgid "The server does not support TLS 1.0."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:621
+msgid "Not checking for TLS 1.0-support, as the server does not offer HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:633
+#: privacyscore/evaluation/default_checks.py:1121
+msgid "The server supports TLS 1.1."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:637
+#: privacyscore/evaluation/default_checks.py:1125
+msgid "The server does not support TLS 1.1."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:641
+msgid "Not checking for TLS 1.1-support, as the server does not offer HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:653
+#: privacyscore/evaluation/default_checks.py:1141
+msgid "The server supports TLS 1.2."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:657
+#: privacyscore/evaluation/default_checks.py:1145
+msgid "The server does not support TLS 1.2."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:661
+msgid "Not checking for TLS 1.2-support, as the server does not offer HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:673
+msgid ""
+"The site uses HTTPS, but some objects are retrieved via HTTP (mixed content)."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:677
+msgid ""
+"The site uses HTTPS and all objects are retrieved via HTTPS (no mixed "
+"content)."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:681
+msgid "The site was scanned via HTTP only, mixed content checks do not apply."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:693
+#: privacyscore/evaluation/default_checks.py:1161
+msgid "The server may be vulnerable to the Heartbleed attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:698
+#: privacyscore/evaluation/default_checks.py:1166
+msgid "The server is secure against the Heartbleed attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:702
+#: privacyscore/evaluation/default_checks.py:1170
+msgid ""
+"Not checking for the Heartbleed vulnerability, as the server does not offer "
+"HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:714
+#: privacyscore/evaluation/default_checks.py:1182
+msgid "The server may be vulnerable to the CCS attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:719
+#: privacyscore/evaluation/default_checks.py:1187
+msgid "The server is secure against the CCS attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:723
+#: privacyscore/evaluation/default_checks.py:1191
+msgid ""
+"Not checking for the CCS vulnerability, as the server does not offer HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:735
+#: privacyscore/evaluation/default_checks.py:1203
+msgid "The server may be vulnerable to the Ticketbleed attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:740
+#: privacyscore/evaluation/default_checks.py:1208
+msgid "The server is secure against the Ticketbleed attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:744
+#: privacyscore/evaluation/default_checks.py:1212
+msgid ""
+"Not checking for the Ticketbleed vulnerability, as the server does not offer "
+"HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:756
+#: privacyscore/evaluation/default_checks.py:1224
+msgid "The server may be vulnerable to a Secure Re-Negotiation attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:761
+#: privacyscore/evaluation/default_checks.py:1229
+msgid "The server is secure against the Secure Re-Negotiation attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:765
+#: privacyscore/evaluation/default_checks.py:1233
+msgid ""
+"Not checking for the Secure Re-Negotiation vulnerability, as the server does "
+"not offer HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:777
+#: privacyscore/evaluation/default_checks.py:1245
+msgid ""
+"The server may be vulnerable to the Secure Client Re-Negotiation attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:782
+#: privacyscore/evaluation/default_checks.py:1250
+msgid "The server is secure against the Secure Client Re-Negotiation attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:786
+#: privacyscore/evaluation/default_checks.py:1254
+msgid ""
+"Not checking for the Secure Client Re-Negotiation vulnerability, as the "
+"server does not offer HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:798
+#: privacyscore/evaluation/default_checks.py:1266
+msgid "The server may be vulnerable to the CRIME attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:803
+#: privacyscore/evaluation/default_checks.py:1271
+msgid "The server is secure against the CRIME attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:807
+#: privacyscore/evaluation/default_checks.py:1275
+msgid ""
+"Not checking for the CRIME vulnerability, as the server does not offer HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:819
+#: privacyscore/evaluation/default_checks.py:1287
+msgid "The server may be vulnerable to the BREACH attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:824
+#: privacyscore/evaluation/default_checks.py:1292
+msgid "The server is secure against the BREACH attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:828
+#: privacyscore/evaluation/default_checks.py:1296
+msgid ""
+"Not checking for the BREACH vulnerability, as the server does not offer "
+"HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:840
+#: privacyscore/evaluation/default_checks.py:1308
+msgid "The server may be vulnerable to the POODLE attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:845
+#: privacyscore/evaluation/default_checks.py:1313
+msgid "The server is secure against the POODLE attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:849
+#: privacyscore/evaluation/default_checks.py:1317
+msgid ""
+"Not checking for the POODLE vulnerability, as the server does not offer "
+"HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:861
+#: privacyscore/evaluation/default_checks.py:1329
+msgid "The server may be vulnerable to the SWEET32 attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:866
+#: privacyscore/evaluation/default_checks.py:1334
+msgid "The server is secure against the SWEET32 attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:870
+#: privacyscore/evaluation/default_checks.py:1338
+msgid ""
+"Not checking for the SWEET32 vulnerability, as the server does not offer "
+"HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:882
+#: privacyscore/evaluation/default_checks.py:1350
+msgid "The server may be vulnerable to the FREAK attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:887
+#: privacyscore/evaluation/default_checks.py:1355
+msgid "The server is secure against the FREAK attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:891
+#: privacyscore/evaluation/default_checks.py:1359
+msgid ""
+"Not checking for the FREAK vulnerability, as the server does not offer HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:903
+#: privacyscore/evaluation/default_checks.py:1371
+msgid "The server may be vulnerable to the DROWN attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:908
+#: privacyscore/evaluation/default_checks.py:1376
+msgid "The server is secure against the DROWN attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:912
+#: privacyscore/evaluation/default_checks.py:1380
+msgid ""
+"Not checking for the DROWN vulnerability, as the server does not offer HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:924
+#: privacyscore/evaluation/default_checks.py:1392
+msgid "The server may be vulnerable to the LOGJAM attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:929
+#: privacyscore/evaluation/default_checks.py:1397
+msgid "The server is secure against the LOGJAM attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:933
+#: privacyscore/evaluation/default_checks.py:1401
+msgid ""
+"Not checking for the LOGJAM vulnerability, as the server does not offer "
+"HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:945
+#: privacyscore/evaluation/default_checks.py:1413
+msgid "The server may be vulnerable to the BEAST attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:950
+#: privacyscore/evaluation/default_checks.py:1418
+msgid "The server is secure against the BEAST attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:954
+#: privacyscore/evaluation/default_checks.py:1422
+msgid ""
+"Not checking for the BEAST vulnerability, as the server does not offer HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:966
+#: privacyscore/evaluation/default_checks.py:1434
+msgid "The server may be vulnerable to the LUCKY13 attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:971
+#: privacyscore/evaluation/default_checks.py:1439
+msgid "The server is secure against the LUCKY13 attack."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:975
+#: privacyscore/evaluation/default_checks.py:1443
+msgid ""
+"Not checking for the LUCKY13 vulnerability, as the server does not offer "
+"HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:987
+#: privacyscore/evaluation/default_checks.py:1455
+msgid "The server supports the outdated and insecure RC4 cipher."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:992
+#: privacyscore/evaluation/default_checks.py:1460
+msgid "The server does not support the outdated and insecure RC4 cipher."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:996
+#: privacyscore/evaluation/default_checks.py:1464
+msgid ""
+"Not checking for RC4 cipher support, as the server does not offer HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:1008
+#: privacyscore/evaluation/default_checks.py:1476
+msgid "The server is not using TLS_FALLBACK_SCSV to prevent downgrade attacks."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:1012
+#: privacyscore/evaluation/default_checks.py:1480
+msgid "The server uses TLS_FALLBACK_SCSV to prevent downgrade attacks."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:1016
+#: privacyscore/evaluation/default_checks.py:1484
+msgid ""
+"Not checking for TLS_FALLBACK_SCSV support, as the server does not offer "
+"HTTPS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:1032
+msgid "No mail server is available for this site."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:1043
+msgid "The mail server does not seem to support encryption."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:1048
+msgid "The SSL scan of the mail server timed out."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:1068
+msgid "Not checking for SSLv2 support, as the server does not offer TLS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:1089
+msgid "Not checking for SSLv3 support, as the server does not offer TLS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:1109
+msgid "Not checking for TLS 1.0-support, as the server does not offer TLS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:1129
+msgid "Not checking for TLS 1.1-support, as the server does not offer TLS."
+msgstr ""
+
+#: privacyscore/evaluation/default_checks.py:1149
+msgid "Not checking for TLS 1.2-support, as the server does not offer TLS."
+msgstr ""
+
+#: privacyscore/evaluation/description.py:44
+#, python-format
+msgid "The locations of the %(server_type)s could not be detected."
+msgstr ""
+
+#: privacyscore/evaluation/description.py:55
+#, python-format
+msgid "All %(server_type)s are located in %(country)s."
+msgstr ""
+
+#: privacyscore/evaluation/description.py:63
+#, python-format
+msgid "The %(server_type)s are located in %(countries)s."
+msgstr ""
+
+#: privacyscore/evaluation/result_groups.py:16
+msgid "NoTrack: No Tracking by Website and Third Parties"
+msgstr ""
+
+#: privacyscore/evaluation/result_groups.py:17
+msgid "NoTrack"
+msgstr ""
+
+#: privacyscore/evaluation/result_groups.py:18
+msgid "No Tracking by Website and Third Parties"
+msgstr ""
+
+#: privacyscore/evaluation/result_groups.py:21
+msgid "EncWeb: Encryption of Web Traffic"
+msgstr ""
+
+#: privacyscore/evaluation/result_groups.py:22
+msgid "EncWeb"
+msgstr ""
+
+#: privacyscore/evaluation/result_groups.py:23
+msgid "Encryption of Web Traffic"
+msgstr ""
+
+#: privacyscore/evaluation/result_groups.py:26
+msgid "Attacks: Protection Against Various Attacks"
+msgstr ""
+
+#: privacyscore/evaluation/result_groups.py:27
+msgid "Attacks"
+msgstr ""
+
+#: privacyscore/evaluation/result_groups.py:28
+msgid "Protections Against Various Attacks"
+msgstr ""
+
+#: privacyscore/evaluation/result_groups.py:31
+msgid "EncMail: Encryption of Mail Traffic"
+msgstr ""
+
+#: privacyscore/evaluation/result_groups.py:32
+msgid "EncMail"
+msgstr ""
+
+#: privacyscore/evaluation/result_groups.py:33
+msgid "Encryption of Mail Traffic"
+msgstr ""
+
+#: privacyscore/frontend/forms.py:14 privacyscore/frontend/forms.py:66
+#: privacyscore/frontend/templates/frontend/ranking_list.html:5
+msgid "URL"
+msgstr ""
+
+#: privacyscore/frontend/forms.py:22
+msgid "The url is not valid."
+msgstr ""
+
+#: privacyscore/frontend/forms.py:47
+msgid "Invalid CSV header."
+msgstr ""
+
+#: privacyscore/frontend/forms.py:55
+msgid "Invalid CSV data."
+msgstr ""
+
+#: privacyscore/frontend/forms.py:65
+msgid "Unknown column {}"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/base.html:78
+#: privacyscore/frontend/templates/frontend/base.html:80
+msgid "All times are shown in UTC (GMT+0)."
+msgstr "Alle angezeigten Zeiten sind in UTC (GMT+0)."
+
+#: privacyscore/frontend/templates/frontend/base.html:86
+msgid "About"
+msgstr "Über das Projekt"
+
+#: privacyscore/frontend/templates/frontend/base.html:88
+msgid ""
+"PrivacyScore is a website scanning tool that allows anyone to benchmark "
+"security and privacy features of websites."
+msgstr ""
+"PrivacyScore ist ein Website-Scanner, mit dem jeder die Sicherheits- und "
+"Datenschutzfunktionen von Websites bewerten kann."
+
+#: privacyscore/frontend/templates/frontend/base.html:89
+msgid "Rankings are public and can be configured to one's preferences."
+msgstr ""
+"Rankings sind öffentlich und können nach eigenen Wünschen konfiguriert "
+"werden."
+
+#: privacyscore/frontend/templates/frontend/base.html:90
+msgid "PrivacyScore helps users, activists, and data protection authorities."
+msgstr "PrivacyScore hilft Benutzern, Aktivisten und Datenschutzbehörden."
+
+#: privacyscore/frontend/templates/frontend/base.html:94
+msgid "Feedback"
+msgstr "Feedback"
+
+#: privacyscore/frontend/templates/frontend/base.html:95
+msgid "We are curious to receive your feedback."
+msgstr "Wir freuen uns über Ihr Feedback."
+
+#: privacyscore/frontend/templates/frontend/base.html:96
+msgid "Please do not hesitate to contact us if you observe any errors."
+msgstr ""
+"Bitte zögern Sie nicht, uns zu kontaktieren, wenn Sie Fehler feststellen."
+
+#: privacyscore/frontend/templates/frontend/base.html:97
+msgid "Site owners can request to exclude their sites from future scans."
+msgstr ""
+"Seitenbetreiber können uns bitten, keine weiteren Scans ihrer Seiten "
+"durchzuführen."
+
+#: privacyscore/frontend/templates/frontend/base.html:100
+msgid "Beta Status"
+msgstr "Beta-Status"
+
+#: privacyscore/frontend/templates/frontend/base.html:101
+msgid "PrivacyScore is currently in public beta."
+msgstr "PrivacyScore befindet sich derzeit in der öffentlichen Beta-Phase."
+
+#: privacyscore/frontend/templates/frontend/base.html:102
+msgid ""
+"While we're giving our very best, we currently cannot guarantee the accuracy "
+"of the displayed results and rankings."
+msgstr ""
+"Obwohl wir unser Bestes geben, können wir derzeit nicht für die Richtigkeit "
+"der angezeigten Ergebnisse und Rankings garantieren."
+
+#: privacyscore/frontend/templates/frontend/base.html:111
+msgid "All texts published on this site are licensed under"
+msgstr "Alle hier veröffentlichten Texte sind lizenziert unter"
+
+#: privacyscore/frontend/templates/frontend/base.html:124
+#: privacyscore/frontend/templates/frontend/imprint.html:7
+msgid "Imprint / Impressum"
+msgstr "Impressum"
+
+#: privacyscore/frontend/templates/frontend/browse.html:34
+msgid "Browse Lists"
+msgstr "Verfügbare Listen"
+
+#: privacyscore/frontend/templates/frontend/browse.html:45
+msgid "Search in list descriptions and tags"
+msgstr "Listenbeschreibungen und Tags durchsuchen"
+
+#: privacyscore/frontend/templates/frontend/browse.html:47
+msgid "Search"
+msgstr "Suchen"
+
+#: privacyscore/frontend/templates/frontend/browse.html:147
+msgid "previous"
+msgstr "zurück"
+
+#: privacyscore/frontend/templates/frontend/browse.html:151
+#, python-format
+msgid ""
+"\n"
+"                    Page %(page)s of %(pages)s.\n"
+"                    "
+msgstr ""
+"\n"
+"                    Seite %(page)s von %(pages)s.\n"
+"                    "
+
+#: privacyscore/frontend/templates/frontend/browse.html:157
+msgid "next"
+msgstr "weiter"
+
+#: privacyscore/frontend/templates/frontend/checks.html:4
+#: privacyscore/frontend/templates/frontend/checks.html:7
+msgid "Checks"
+msgstr "Checks"
+
+#: privacyscore/frontend/templates/frontend/code.html:4
+msgid "Code"
+msgstr "Code"
+
+#: privacyscore/frontend/templates/frontend/code.html:11
+msgid "Open Source Policy"
+msgstr "Open-Source-Policy"
+
+#: privacyscore/frontend/templates/frontend/create_site.html:18
+msgid "Scan site"
+msgstr "Seite scannen"
+
+#: privacyscore/frontend/templates/frontend/faq.html:4
+msgid "FAQ"
+msgstr "FAQ"
+
+#: privacyscore/frontend/templates/frontend/faq.html:7
+msgid "Frequently Asked Questions"
+msgstr "Häufig gestellte Fragen"
+
+#: privacyscore/frontend/templates/frontend/faq.html:11
+msgid ""
+"\n"
+"        <h3>For Internet Users</h3>\n"
+"        <div class=\"hline\"></div>\n"
+"        <br>\n"
+"        <b>Q:</b> Your scoring and ranking does not fit my preferences. Can "
+"I change the composition of test groups?\n"
+"        <br>\n"
+"        <b>A:</b> Unfortunately, this is not possible at the moment. This "
+"will be possible after the beta phase.\n"
+"        <br>\n"
+"        <br>\n"
+"        <b>Q:</b> Do you also check what the websites will do with my "
+"personal information?\n"
+"        <br>\n"
+"        <b>A:</b> We can only assess things that can be determined "
+"automatically. PrivacyScore does not analyze privacy policies or make any "
+"statements about the general trustworthiness of the website.\n"
+"        <br>\n"
+"        <br>\n"
+"        "
+msgstr ""
+"\n"
+"        <h3>Für Internetbenutzer</h3>\n"
+"        <div class=\"hline\"></div>\n"
+"        <br>\n"
+"        <b>Q:</b> Das Standard-Scoring und -Ranking-Schema entspricht nicht "
+"meinen Vorstellungen. Kann ich die Zusammensetzung der Check-Gruppen "
+"ändern?\n"
+"        <br>\n"
+"        <b>A:</b> Leider ist dies derzeit nicht möglich. Dies wird nach der "
+"Beta-Phase möglich sein.\n"
+"        <br>\n"
+"        <br>\n"
+"        <b>Q:</b> Überprüft PrivacyScore was die Webseiten mit meinen "
+"persönlichen Daten machen werden?\n"
+"        <br>\n"
+"        <b>A:</b> Wir können nur Dinge beurteilen, die automatisch ermittelt "
+"werden können. PrivacyScore analysiert keine Datenschutzrichtlinien und kann "
+"auch keine Aussagen über die grundsätzliche Vertrauenswürdigkeit von "
+"Webseiten machen.\n"
+"        <br>\n"
+"        <br>\n"
+"        "
+
+#: privacyscore/frontend/templates/frontend/faq.html:26
+msgid ""
+"\n"
+"        <h3>For Website Operators</h3>\n"
+"        <div class=\"hline\"></div>\n"
+"        <br>\n"
+"        <b>Q:</b> My site has been scanned by PrivacyScore. I do not want to "
+"be scanned in the future.\n"
+"        <br>\n"
+"        <b>A:</b> Please <a href=\"mailto:privacyscore@mailhost.informatik."
+"uni-hamburg.de\">contact us via e-mail</a> and we will add you to our "
+"blacklist.\n"
+"        <br>\n"
+"        <br>\n"
+"        <b>Q:</b> My site has been scanned by PrivacyScore. The results are "
+"wrong.\n"
+"        <br>\n"
+"        <b>A:</b> We are sorry for this mistake. Please <a href=\"mailto:"
+"privacyscore@mailhost.informatik.uni-hamburg.de\">contact us via e-mail</a>. "
+"We will amend the erroneous result and use your feedback to improve the "
+"corresponding test.\n"
+"        <br>\n"
+"        <br>\n"
+"        <b>Q:</b> I want to blacklist your scanning machines. What are their "
+"IP addresses?\n"
+"        <br>\n"
+"        "
+msgstr ""
+"\n"
+"        <h3>Für Website-Betreiber </h3>\n"
+"        <div class=\"hline\"></div>\n"
+"        <br>\n"
+"        <b>Q:</b> Meine Seite wurde von PrivacyScore gescannt. Ich möchte in "
+"Zukunft nicht mehr gescannt werden.\n"
+"        <br>\n"
+"        <b>A:</b> Bitte <a href=\"mailto:privacyscore@mailhost.informatik."
+"uni-hamburg.de\">kontaktieren Sie uns per E-Mail</a>. Wir werden Ihre Seite "
+"dann nicht mehr scannen.\n"
+"        <br>\n"
+"        <br>\n"
+"        <b>Q:</b> Meine Seite wurde von PrivacyScore gescannt. Die "
+"Ergebnisse sind falsch.\n"
+"        <br>\n"
+"        <b>A:</b> Dieser Fehler tut uns leid. Bitte <a href=\"mailto:"
+"privacyscore@mailhost.informatik.uni-hamburg.de\">kontaktieren Sie uns per E-"
+"Mail </a>. Wir werden das fehlerhafte Ergebnis korrigieren und Ihr Feedback "
+"nutzen, um den entsprechenden Test zu verbessern.\n"
+"        <br>\n"
+"        <br>\n"
+"        <b>Q:</b> Ich möchte Ihre Scanner auf meine IP-Blocklist setzen. Wie "
+"lauten ihre IP-Adressen?\n"
+"        <br>\n"
+"        "
+
+#: privacyscore/frontend/templates/frontend/faq.html:46
+msgid ""
+"\n"
+"        <h3>For Data Protection Officers, Privacy Activists and Researchers</"
+"h3>\n"
+"        <div class=\"hline\"></div>\n"
+"        <br>\n"
+"        <b>Q:</b> Can we host a separate instance of PrivacyScore on our own "
+"servers?\n"
+"        <br>\n"
+"        <b>A:</b> Yes. We have published our source code including scripts "
+"for simplified  deployment. See the <a href=\"/code/\">Code</a> section on "
+"our website for more details.\n"
+"        <br>\n"
+"        <br>\n"
+"        <b>Q:</b> We have ideas for additional tests. Can you include those "
+"in PrivacyScore?\n"
+"        <br>\n"
+"        <b>A:</b> We are currently very busy improving the stability of our "
+"code. However, we are happy to include additional tests if they can be "
+"performed automatically with sufficient accuracy.\n"
+"        <br>\n"
+"        <br>\n"
+"        "
+msgstr ""
+"\n"
+"        <h3>Für Datenschutzbeauftragte, Datenschutzbeauftragte und Forscher "
+"</h3>\n"
+"        <div class=\"hline\"></div>\n"
+"        <br>\n"
+"        <b>Q:</b> Können wir eine separate Instanz von PrivacyScore auf "
+"unseren eigenen Servern hosten?\n"
+"        <br>\n"
+"        <b>A:</b> Ja. Wir haben unseren Quellcode mit Skripten zur relativ "
+"einfachen Bereitstellung veröffentlicht. Siehe den Abschnitt <a href=\"/code/"
+"\">Code</a> auf unserer Website für weitere Details.\n"
+"        <br>\n"
+"        <br>\n"
+"        <b>Q:</b> Wir haben Ideen für zusätzliche Tests. Können Sie diese in "
+"PrivacyScore aufnehmen?\n"
+"        <br>\n"
+"        <b>A:</b> Wir sind derzeit sehr damit beschäftigt, die Stabilität "
+"unseres Codes zu verbessern. Gerne nehmen wir jedoch zusätzliche Tests auf, "
+"wenn diese automatisch und mit ausreichender Genauigkeit durchgeführt werden "
+"können.\n"
+"        <br>\n"
+"        <br>\n"
+"        "
+
+#: privacyscore/frontend/templates/frontend/faq.html:64
+msgid "How many sites are in your database?"
+msgstr "Wie viele Seiten befinden sich in der Datenbank?"
+
+#: privacyscore/frontend/templates/frontend/faq.html:68
+msgid "How many sites are currently in the scanning queue?"
+msgstr "Wie viele Seiten sind derzeit in der Warteschlange?"
+
+#: privacyscore/frontend/templates/frontend/faq.html:71
+msgid "How many scans have you performed so far?"
+msgstr "Wie viele Scans wurden bisher durchgeführt?"
+
+#: privacyscore/frontend/templates/frontend/imprint.html:4
+msgid "Imprint"
+msgstr "Impressum"
+
+#: privacyscore/frontend/templates/frontend/index.html:6
+msgid "Welcome"
+msgstr "Willkommen"
+
+#: privacyscore/frontend/templates/frontend/index.html:11
+msgid "Compare Websites with PrivacyScore"
+msgstr "Webseiten vergleichen mit PrivacyScore"
+
+#: privacyscore/frontend/templates/frontend/index.html:12
+msgid ""
+"PrivacyScore allows you to test websites and rank them according to their "
+"security and privacy features."
+msgstr ""
+"PrivacyScore erlaubt Ihnen, Websites hinsichtlich einer Reihe von "
+"Sicherheits- und Datenschutzfunktionen zu bewerten."
+
+#: privacyscore/frontend/templates/frontend/index.html:16
+msgid "Create new site list"
+msgstr "Eigene Liste erstellen"
+
+#: privacyscore/frontend/templates/frontend/index.html:17
+msgid "or scan a single site immediately"
+msgstr "oder eine bestimmte Seite direkt scannen"
+
+#: privacyscore/frontend/templates/frontend/index.html:21
+msgid "URL, e.g. privacyscore.org"
+msgstr "URL, z.B. privacyscore.org"
+
+#: privacyscore/frontend/templates/frontend/index.html:25
+msgid "SCAN"
+msgstr "LOS"
+
+#: privacyscore/frontend/templates/frontend/index.html:37
+msgid ""
+"<strong>PrivacyScore is in public beta since 8 June 2017.</strong><br>We "
+"post updates on <a href=\"https://twitter.com/privascore\">Twitter</a>."
+msgstr ""
+"<strong>PrivacyScore ist seit dem 8. Juni 2017 in einer öffentlichen Beta-"
+"Phase. </strong><br>Wir veröffentlichen Updates auf <a href=\"https://"
+"twitter.com/privascore\">Twitter</a>."
+
+#: privacyscore/frontend/templates/frontend/index.html:38
+msgid ""
+"Some parts of the site are also available in German. Please contact us if "
+"you want to contribute by translating the site."
+msgstr ""
+"Einige Teile der Seite sind auch in deutscher Sprache verfügbar. Bitte "
+"melden Sie sich, wenn Sie uns bei der Übersetzung der Seite helfen möchten."
+
+#: privacyscore/frontend/templates/frontend/index.html:39
+msgid ""
+"Note that it is not possible to edit lists at the moment. Feel free to "
+"create a new list and inform us so that we can delete the previous version."
+msgstr ""
+"Beachten Sie, dass es derzeit nicht möglich ist, Listen zu bearbeiten. "
+"Erstellen Sie stattdessen einfach eine neue Liste auf Basis der alten und "
+"informieren Sie uns darüber, damit wir die alte Liste löschen können."
+
+#: privacyscore/frontend/templates/frontend/index.html:46
+msgid "Lists in the Spotlight"
+msgstr "Listen im Fokus"
+
+#: privacyscore/frontend/templates/frontend/index.html:47
+msgid ""
+"We present selected lists of websites that have been added to PrivacyScore."
+"<br>Long lists load quite slowly. Please be patient."
+msgstr ""
+"Wir präsentieren ausgewählte Listen von Websites, die bereits verfügbar sind."
+"<br>Lange Listen laden ziemlich langsam. Bitte haben Sie Geduld."
+
+#: privacyscore/frontend/templates/frontend/index.html:47
+msgid "IMPROVEMENTS UNDERWAY"
+msgstr "VERBESSERUNGEN IN ARBEIT"
+
+#: privacyscore/frontend/templates/frontend/index.html:71
+#: privacyscore/frontend/templates/frontend/index.html:74
+msgid "Create your own list"
+msgstr "Eigene Liste erstellen"
+
+#: privacyscore/frontend/templates/frontend/index.html:78
+msgid "Do you want to submit your own list of websites?"
+msgstr "Möchten Sie Ihre eigene Liste von Websites hochladen?"
+
+#: privacyscore/frontend/templates/frontend/index.html:79
+msgid "You are just one click away!"
+msgstr "Sie sind nur einen Klick entfernt!"
+
+#: privacyscore/frontend/templates/frontend/index.html:89
+#, python-format
+msgid ""
+"\n"
+"            <div class=\"col-md-5 col-md-push-1\">\n"
+"                <h2>What is PrivacyScore?</h2>\n"
+"\n"
+"                <p>PrivacyScore is an automated website scanner that allows "
+"you to investigate Websites for privacy and security issues. You can scan "
+"individual websites, or enter a list of related websites to see how they "
+"compare against each other.\n"
+"                </p>\n"
+"                \n"
+"                <h2>What PrivacyScore is not</h2>\n"
+"                <p>The tests carried out by PrivacyScore have been tested "
+"extensively. However we consider most them to be <strong>unreliable</strong> "
+"at the moment.</p>\n"
+"                <p>At the moment, PrivacyScore can only report on technical "
+"security and privacy measures that can be analyzed automatically. In "
+"particular, we do not analyze privacy policies, whether informed consent was "
+"obtained, etc. This may change in the future.\n"
+"                </p>\n"
+"            </div>\n"
+"            \n"
+"            \n"
+"            <div class=\"col-md-5 col-md-push-1\">\n"
+"                <h2>Our Current Checks</h2>\n"
+"                \n"
+"                <p>Our <em>beta release</em> of PrivacyScore reports on four "
+"types of issues. Your feedback is very much appreciated!\n"
+"                </p>\n"
+"                \n"
+"                <ul class=\"list-group\" style=\"width: 90%%\">\n"
+"                    <li class=\"list-group-item\">\n"
+"                        <strong>Tracking and Privacy Checks</strong> test if "
+"the website is tracking you, or allowing others to do so.\n"
+"                    </li>\n"
+"                    <li class=\"list-group-item\">\n"
+"                        <strong>Website Encryption</strong> tests check if "
+"the webserver offers HTTPS connections, and how securely they are "
+"configured.\n"
+"                    </li>\n"
+"                    <li class=\"list-group-item\">\n"
+"                        <strong>Web Security Checks</strong> test if the "
+"website has any obvious security flaws.\n"
+"                    </li>\n"
+"                    <li class=\"list-group-item\">\n"
+"                        <strong>Mail Encryption</strong> is often "
+"overlooked. PrivacyScore checks whether the mail servers of a website "
+"support state-of-the-art transport encryption.\n"
+"                    </li>\n"
+"                </ul>\n"
+"            </div>\n"
+"            "
+msgstr ""
+"\n"
+"            <div class=\"col-md-5 col-md-push-1\">\n"
+"                <h2>Was ist PrivacyScore?</h2>\n"
+"\n"
+"                <p>PrivacyScore ist ein automatischer Webseiten-Scanner, der "
+"es Ihnen ermöglicht, Webseiten auf Datenschutz- und Sicherheitsaspekte hin "
+"zu untersuchen. Sie können einzelne Websites scannen oder eine Liste von "
+"verwandten Websites hochladen, um zu sehen, wie sie im Vergleich mit anderen "
+"Websites abschneiden.\n"
+"                </p>\n"
+"                \n"
+"                <h2>Was ist PrivacyScore nicht?</h2>\n"
+"                Die von PrivacyScore durchgeführten Tests wurden ausgiebig "
+"getestet. Allerdings sind die meisten Tests nach unserer Erfahrung im Moment "
+"<strong>unzuverlässig</strong>.</p>\n"
+"                Im Moment kann PrivacyScore nur über technische Sicherheits- "
+"und Datenschutzmaßnahmen berichten, die automatisch analysiert werden "
+"können. Insbesondere analysieren wir nicht die Datenschutzbestimmungen, ob "
+"eine informierte Einwilligung eingeholt wurde, etc. Das könnte sich in "
+"Zukunft ändern.\n"
+"                </p>\n"
+"            </div>\n"
+"            \n"
+"            \n"
+"            <div class=\"col-md-5 col-md-push-1\">\n"
+"                <h2>Unsere aktuellen Checks</h2>\n"
+"                \n"
+"                <p>Unsere <em>Betaversion</em> von PrivacyScore informiert "
+"über vier Arten von Problemen. Ihr Feedback ist sehr willkommen!\n"
+"                </p>\n"
+"                \n"
+"                <ul class=\"list-group\" style=\"width: 90%%\">\n"
+"                    <li class=\"list-group-item\">\n"
+"                        <strong>NoTrack: Tracking und Privatsphäre-Checks</"
+"strong> testen, ob die Website Ihre Aktivitäten verfolgt oder anderen "
+"Anbietern ermöglicht, dies zu tun.\n"
+"                    </li>\n"
+"                    <li class=\"list-group-item\">\n"
+"                        <strong>EncWeb: Verschlüsselung durch den Webserver "
+"</strong> prüft, ob der Webserver HTTPS-Verbindungen anbietet und wie sicher "
+"diese konfiguriert sind.\n"
+"                    </li>\n"
+"                    <li class=\"list-group-item\">\n"
+"                        <strong>Attacks: Web-Security-Checks</strong> "
+"testen, ob die Website offensichtliche Sicherheitslücken aufweist und ob "
+"grundlegende Sicherheitsemachanismen verwendet werden.\n"
+"                    </li>\n"
+"                    <li class=\"list-group-item\">\n"
+"                        <strong>EncMail: E-Verschlüsseliung durch den "
+"Mailserver</strong> wird oft übersehen. PrivacyScore prüft, ob die "
+"Mailserver einer Website eine angemessene Transportverschlüsselung "
+"ermöglichen.\n"
+"                    </li>\n"
+"                </ul>\n"
+"            </div>\n"
+"            "
+
+#: privacyscore/frontend/templates/frontend/index.html:133
+msgid ""
+"\n"
+"                <h2>The PrivacyScore Vision</h2>\n"
+"                <p>We want to offer users, activists, data protection "
+"authorities, and data protection officers <strong>an easily accessible and "
+"flexible tool</strong> to assess the security and privacy measures of "
+"websites. PrivacyScore allows its users to</p>\n"
+"                \n"
+"                <ul class=\"list-group\">\n"
+"                    <li class=\"list-group-item\">\n"
+"                        determine whether best practices in security and "
+"privacy protection techniques are implemented\n"
+"                    </li>\n"
+"\n"
+"                    <li class=\"list-group-item\">\n"
+"                        assess how a website ranks within its peer group\n"
+"                    </li>\n"
+"                    <li class=\"list-group-item\">\n"
+"                        aggregate results according to site attributes (such "
+"as: <em>country</em> or <em>funding source</em>)\n"
+"                    </li>\n"
+"                    <li class=\"list-group-item\">\n"
+"                        influence the ranking according to their own "
+"preferences\n"
+"                    </li>\n"
+"                </ul>\n"
+"                "
+msgstr ""
+"\n"
+"                <h2>Die PrivacyScore-Vision</h2>\n"
+"                <p>Wir wollen Nutzern, Aktivisten, Datenschutzbehörden und "
+"Datenschutzbeauftragten <stark>ein leicht zugängliches und flexibles "
+"Werkzeug anbieten, um die Sicherheits- und Datenschutzmaßnahmen von Websites "
+"zu bewerten. PrivacyScore erlaubt es seinen Nutzern\n"
+"                \n"
+"                <ul class=\"list-group\">\n"
+"                    <li class=\"list-group-item\">\n"
+"                        festzustellen, ob bewährte Verfahren im Bereich der "
+"Sicherheit und des Schutzes der Privatsphäre angewandt werden\n"
+"                    </li>\n"
+"\n"
+"                    <li class=\"list-group-item\">\n"
+"                        zu beurteilen, wie eine Website innerhalb ihrer "
+"Vergleichsgruppe rangiert\n"
+"                    </li>\n"
+"                    <li class=\"list-group-item\">\n"
+"                        die Ergebnisse nach Attributen zu aggregieren (z.B.: "
+"<em>Land</em> oder <em>Finanzierungsquelle</em>)\n"
+"                    </li>\n"
+"                    <li class=\"list-group-item\">\n"
+"                        das Ranking nach eigenen Präferenzen zu "
+"beeinflussen\n"
+"                    </li>\n"
+"                </ul>\n"
+"                "
+
+#: privacyscore/frontend/templates/frontend/index.html:155
+msgid "Talks and Publications"
+msgstr "Vorträge und Veröffentlichungen"
+
+#: privacyscore/frontend/templates/frontend/list.html:15
+msgid "Submit a New List of Websites"
+msgstr "Eine neue Liste von Webseiten hochladen"
+
+#: privacyscore/frontend/templates/frontend/list.html:23
+msgid "Basic Information"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/list.html:28
+msgid "Name"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/list.html:32
+msgid ""
+"Private List (only you can view the results) <span class=\"label label-"
+"warning\">coming soon!</span>"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/list.html:37
+msgid "Tags (separated by spaces)"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/list.html:47
+msgid "Your Name (or a pseudonym, will be published)"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/list.html:51
+msgid "E-mail Address (optional, will not be published)"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/list.html:61
+msgid "Description"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/list.html:63
+msgid ""
+"<em>Instructions:</em> Please start with a <em>brief description</em> of the "
+"list and the motivation to scan it. Please stay between 20 and 50 words, "
+"because we show this first paragraph as a preview in the list directory. The "
+"second paragraph should <em>present details about the collection</em> and if "
+"there is something peculiar about it. The next paragraph can be used to "
+"<em>describe the sources</em> you used to compile the entries (if any). "
+"Finally, the last paragraph should be used to explain the <em>site "
+"attributes</em> and the meaning of the possible values."
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/list.html:70
+msgid "Upload List as CSV File"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/list.html:74
+msgid ""
+"Sorry, but your CSV file is invalid. Please read the instructions and try "
+"again."
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/list.html:92
+msgid ""
+"During the initial stage of the beta phase we ask you to submit your list of "
+"websites by uploading a comma-separated values (CSV) file. At the moment you "
+"can upload lists with a <strong>maximum number of 500 websites</strong>."
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/list.html:94
+msgid "Instructions:"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/list.html:96
+msgid ""
+"The CSV file has to contain a <em>header line</em> followed by multiple "
+"rows, one row per website."
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/list.html:97
+msgid ""
+"The <em>first column</em> is expected to be the URL of the site. We assume "
+"http:// by default, if you do not specify the protocol explicitly (e.g. "
+"\"unicorn.example.it\"). Prefixing a URL with https:// will only scan the "
+"website via HTTPS. Please do not mix http:// and https:// URLs in your lists "
+"for now, because this will bias the results."
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/list.html:98
+msgid ""
+"All other columns contain <em>site attributes</em>. Site attributes will "
+"allow you to compare the security and privacy level of sub-groups (e.g., "
+"\"are vendors in state A better than in state B?\"). Please ensure that "
+"column headers and values do not exceed 500 characters."
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/list.html:99
+msgid "Please use the <em>semi-colon</em> (;) as a column delimiter for now."
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/list.html:104
+msgid ""
+"The following example illustrates the file structure for a list of "
+"hypothetical e-commerce sites:"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/list.html:167
+msgid "Upload data"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/list.html:172
+msgid "You can make changes after the upload."
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/list.html:187
+msgid "Submit List for Scanning"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/list.html:193
+msgid "Valid data received. You are good to go!"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/list.html:195
+msgid "Please upload CSV data before submitting."
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/login.html:27
+msgid "Login"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/ranking_list.html:49
+#, python-format
+msgid ""
+"\n"
+"                                (%(counter)s failure)\n"
+"                            "
+msgid_plural ""
+"\n"
+"                                (%(counter)s failures)\n"
+"                            "
+msgstr[0] ""
+"\n"
+"                                (%(counter)s Fehler)\n"
+"                            "
+msgstr[1] ""
+"\n"
+"                                (%(counter)s Fehler)\n"
+"                            "
+
+#: privacyscore/frontend/templates/frontend/ranking_list.html:109
+#: privacyscore/frontend/templates/frontend/ranking_list.html:113
+msgid "n/a"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/ranking_summary.html:8
+#, python-format
+msgid ""
+"\n"
+"        <strong>%(count)s passed all checks</strong>\n"
+"        "
+msgstr ""
+"\n"
+"        <strong>%(count)s haben alle Checks bestanden</strong>\n"
+"        "
+
+#: privacyscore/frontend/templates/frontend/ranking_summary.html:14
+#, python-format
+msgid ""
+"\n"
+"        <strong>%(count)s failed one or more checks</strong>\n"
+"        "
+msgstr ""
+"\n"
+"        <strong>%(count)s scheiterten bei einigen Checks</strong>\n"
+"        "
+
+#: privacyscore/frontend/templates/frontend/ranking_summary.html:20
+#, python-format
+msgid ""
+"\n"
+"        <strong>%(count)s failed all checks within a group</strong>\n"
+"        "
+msgstr ""
+"\n"
+"        <strong>%(count)s scheiterten bei allen Checks einer Gruppe</"
+"strong>\n"
+"        "
+
+#: privacyscore/frontend/templates/frontend/ranking_summary.html:26
+#, python-format
+msgid ""
+"\n"
+"        <strong>%(count)s failed critical checks</strong>\n"
+"        "
+msgstr ""
+"\n"
+"        <strong>%(count)s scheiterten bei kritischen Checks</strong>\n"
+"        "
+
+#: privacyscore/frontend/templates/frontend/ranking_summary.html:36
+#, python-format
+msgid ""
+"\n"
+"            <strong>%(counter)s website</strong>\n"
+"        "
+msgid_plural ""
+"\n"
+"            <strong>%(counter)s websites</strong>\n"
+"        "
+msgstr[0] ""
+"\n"
+"            <strong>%(counter)s Webseite</strong>\n"
+"        "
+msgstr[1] ""
+"\n"
+"            <strong>%(counter)s Webseiten</strong>\n"
+"        "
+
+#: privacyscore/frontend/templates/frontend/ranking_summary.html:44
+#, python-format
+msgid ""
+"\n"
+"            %(counter)s scan error\n"
+"        "
+msgid_plural ""
+"\n"
+"            %(counter)s scan errors\n"
+"        "
+msgstr[0] ""
+"\n"
+"            %(counter)s Scan-Fehler\n"
+"        "
+msgstr[1] ""
+"\n"
+"            %(counter)s Scan-Fehler\n"
+"        "
+
+#: privacyscore/frontend/templates/frontend/ranking_summary.html:52
+#, python-format
+msgid ""
+"\n"
+"        %(count)s could not be judged (no data)\n"
+"        "
+msgstr ""
+"\n"
+"        %(count)s ohne Bewertung (mangels Daten)\n"
+"        "
+
+#: privacyscore/frontend/templates/frontend/ranking_summary.html:58
+#, python-format
+msgid ""
+"\n"
+"            %(counter)s \n"
+"            <a href=\"#blacklisted-sites-anchor\">is excluded from scans</"
+"a>\n"
+"        "
+msgid_plural ""
+"\n"
+"            %(counter)s \n"
+"            <a href=\"#blacklisted-sites-anchor\">are excluded from scans</"
+"a>\n"
+"        "
+msgstr[0] ""
+"\n"
+"            %(counter)s \n"
+"            <a href=\"#blacklisted-sites-anchor\">wird von Scans "
+"ausgenommen</a>\n"
+"        "
+msgstr[1] ""
+"\n"
+"            %(counter)s \n"
+"            <a href=\"#blacklisted-sites-anchor\">werden von Scans "
+"ausgenommen</a>\n"
+"        "
+
+#: privacyscore/frontend/templates/frontend/roadmap.html:4
+#: privacyscore/frontend/templates/frontend/roadmap.html:7
+msgid "Roadmap"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/scan_list_created.html:5
+#: privacyscore/frontend/templates/frontend/scan_site_created.html:5
+msgid "Success: scan will start shortly"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/scan_list_created.html:13
+#: privacyscore/frontend/templates/frontend/scan_site_created.html:13
+msgid "Go to the Scan Results Page"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/scan_list_created.html:17
+#: privacyscore/frontend/templates/frontend/scan_site_created.html:17
+msgid "Success!"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/scan_list_created.html:19
+#: privacyscore/frontend/templates/frontend/scan_site_created.html:19
+msgid "Your scan has been added to our scanning queue."
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/scan_list_created.html:23
+#: privacyscore/frontend/templates/frontend/scan_site_created.html:25
+#, python-format
+msgid ""
+"\n"
+"                is <strong> %(counter)s site</strong>\n"
+"            "
+msgid_plural ""
+"\n"
+"                are <strong> %(counter)s sites</strong>\n"
+"            "
+msgstr[0] ""
+msgstr[1] ""
+
+#: privacyscore/frontend/templates/frontend/scan_list_created.html:33
+msgid ""
+"If you want to edit your list later on, remember the following access token:"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/team.html:4
+#: privacyscore/frontend/templates/frontend/team.html:12
+msgid "Team and Contributors"
+msgstr "Team und Unterstützer"
+
+#: privacyscore/frontend/templates/frontend/team.html:91
+msgid "Acknowledgements"
+msgstr "Danksagung"
+
+#: privacyscore/frontend/templates/frontend/team.html:120
+msgid "How can I contribute?"
+msgstr "Wie kann ich mitmachen?"
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:35
+msgid "Author"
+msgstr "Autor"
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:45
+msgid "Results Overview"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:48
+msgid ""
+"<strong>Take the results shown on this page with a grain of salt!</strong> "
+"Some of our checks may report wrong results."
+msgstr ""
+"<strong>Die Ergebnisse auf dieser Seite sind mit Vorsicht zu genießen!</"
+"strong> Einige unserer Tests können falsche Ergebnisse liefern."
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:50
+#: privacyscore/frontend/templates/frontend/view_site.html:255
+msgid "What is this?"
+msgstr "Was ist das?"
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:50
+msgid ""
+"This page shows a summary of a machine-generated analysis of several web "
+"pages commissioned by a PrivacyScore user. During the analysis it was "
+"checked whether the privacy of the visitors is protected on a technical "
+"level as well as possible when visiting the given Internet addresses, and "
+"whether the operator uses common security mechanisms on the website. This "
+"can indicate how seriously an operator takes data protection. However, it is "
+"not possible to determine the actual security level achieved."
+msgstr ""
+"Auf dieser Seite sehen Sie eine Zusammenfassung einer maschinell erstellten "
+"Analyse von mehreren Webseiten, die ein Benutzer von PrivacyScore in Auftrag "
+"gegeben hat. Bei der Analyse wurde überprüft, ob beim Besuch der jeweils "
+"angegebenen Internetadressen die Privatsphäre der Besucher technisch "
+"möglichst gut geschützt wird und ob der Betreiber auf der Webseite gängige "
+"Sicherheitsmechanismen einsetzt. Dies kann Hinweise darauf geben, wie ernst "
+"ein Betreiber den Datenschutz nimmt. Das tatsächlich erreichte "
+"Sicherheitsniveau lässt sich dadurch allerdings nicht ermitteln."
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:50
+#: privacyscore/frontend/templates/frontend/view_site.html:255
+msgid "More details please!"
+msgstr "Mehr Details bitte!"
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:54
+msgid ""
+"\n"
+"                <p><strong>How are the results presented?</strong> Our "
+"analysis focuses on the following aspects: whether tracking services are "
+"used (\"NoTrack\" category), whether selected attacks are prevented, the "
+"quality of encryption during data transmission to the website (EncWeb), and "
+"the quality when sending e-mails to an existing e-mail server (EncMail). You "
+"can control how important these four criteria are for you with the arrows in "
+"the column headings.</p>\n"
+"\n"
+"                <p><strong>What exactly is checked and what do the results "
+"mean?</strong> We check the internet addresses with several techniques, "
+"which we have described in detail in a <a href=\"https://arxiv.org/"
+"abs/1705.05139\">research paper</a>. You can display a list of all checks "
+"and explanations of their relevance by clicking on the address of a web page "
+"to display its detailed results.</p>\n"
+"\n"
+"                <p><strong>What is the purpose of PrivacyScore?</strong> "
+"With PrivacyScore we make websites publicly comparable in terms of selected "
+"properties. As scientists, we are interested in how users and operators deal "
+"with this form of transparency. Among other things, this raises the question "
+"of whether website operators have an additional incentive to improve their "
+"websites.</p>\n"
+"\n"
+"                <p><strong>What can be concluded from the results, what not?"
+"</strong></p>\n"
+"\n"
+"                <p><strong>No statement about the importance of the "
+"categories.</strong> The table sorts the listed web pages according to the "
+"importance you specify. The further up a website is sorted, the more tests "
+"it has passed in the respective categories. In the event of a tie, the "
+"following category will decide. The default sorting is according to the "
+"category \"No Track\", followed by \"EncWeb\", \"Attacks\", and \"EncMail\". "
+"However, this default ranking should not be interpreted as an indication of "
+"the importance of the categories.</p>\n"
+"\n"
+"                <p><strong>No statement on necessity.</strong> The fact that "
+"a web page is ranked at the lower end says nothing about its absolute "
+"security level. The results shown on this page merely provide information on "
+"how the listed websites perform in a direct comparison. Some security "
+"mechanisms are only necessary to protect against strong attacks (e.g., "
+"governments).</p>\n"
+"\n"
+"                <p><strong>Limited expressiveness.</strong> The results "
+"cover only security mechanisms that can be observed from outside when "
+"visiting the specified Internet addresses. It is quite possible that an "
+"operator uses additional internal protection mechanisms and therefore has "
+"decided to leave out some externally visible mechanisms. Furthermore, it is "
+"possible that additional security mechanisms are used on individual pages (e."
+"g., for the transmission of passwords). However, such variations are not "
+"taken into account in the analysis. Therefore, one cannot conclude from the "
+"failure of individual tests that a provider does not handle personal data "
+"with sufficient care. On the other hand, however, it is also possible that a "
+"website has serious security holes, although it achieves a good result on "
+"this page.</p>\n"
+"                "
+msgstr ""
+"\n"
+"                <p><strong>Wie werden die Ergebnisse dargestellt?</strong> "
+"Im einzelnen untersuchen wir, ob Tracking-Dienste verwendet werden "
+"(Kategorie „NoTrack“), ob ausgewählte Angriffe verhindert werden (Attacks) "
+"sowie die Qualität der Verschlüsselung bei der Datenübertragung zur Webseite "
+"(EncWeb) bzw. beim Versand von Mails an einen ggf. vorhandenen E-Mail-Server "
+"(EncMail). Wie wichtig Ihnen diese vier Kriterien sind, können Sie selbst "
+"mit den Pfeilen in den Spaltenüberschriften beeinflussen.</p>\n"
+"\n"
+"                <p><strong>Was genau wird überprüft und was bedeuten die "
+"Ergebnisse?</strong> Wir überprüfen die Internetadressen mit mehreren "
+"Techniken, die wir in einem <a href=\"https://arxiv.org/"
+"abs/1705.05139\">Forschungspapier</a> ausführlich beschrieben haben. Eine "
+"Aufstellung der einzelnen Prüfungen und Erklärungen zu deren Relevanz "
+"erhalten Sie, wenn Sie sich das Detailergebnis einer Webseite anzeigen "
+"lassen.</p>\n"
+"\n"
+"                <p><strong>Welchen Zweck hat PrivacyScore?</strong> Mit "
+"PrivacyScore machen wir Webseiten im Hinblick auf ausgewählte Eigenschaften "
+"öffentlich vergleichbar. Als Wissenschaftler interessiert uns, wie Nutzer "
+"und Betreiber mit dieser Form von Transparenz umgehen. Unter anderem stellt "
+"sich die Frage, ob Betreiber von Webseiten dadurch einen zusätzlichen Anreiz "
+"zur Verbesserung ihrer Webseiten haben.</p>\n"
+"\n"
+"                <p><strong>Was kann man aus den Ergebnissen ablesen, was "
+"nicht?</strong></p>\n"
+"\n"
+"                <p><strong>Keine Aussage zur Wichtigkeit der Kategorien.</"
+"strong> In der Tabelle werden die aufgelisteten Webseiten gemäß der von "
+"Ihnen festgelegten Wichtigkeit sortiert. Je weiter oben eine Webseite "
+"einsortiert wird, desto mehr Prüfungen hat sie in den jeweiligen Kategorien "
+"bestanden. Bei Gleichstand entscheidet die jeweils darauffolgende Kategorie. "
+"Voreingestellt ist die Sortierung nach Kategorie „No Track“, gefolgt von "
+"„EncWeb“, „Attacks“ und „EncMail“. Diese Reihung sagt jedoch nichts über die "
+"Wichtigkeit der Kategorien aus.</p>\n"
+"\n"
+"                <p><strong>Keine Aussage zur Erforderlichkeit.</strong> Dass "
+"eine Webseite auf einem hinteren Platz einsortiert wird, sagt nichts über "
+"das absolute Sicherheitsniveau aus. Die Ergebnisse der Seite geben lediglich "
+"Auskunft darüber, wie die gelisteten Webseiten im direkten Vergleich "
+"abschneiden. Einige Sicherheitsmechanismen sind lediglich erforderlich, um "
+"vor starken Angreifen (z.B. Regierungen) zu schützen.</p>\n"
+"\n"
+"                <p><strong>Beschränkte Aussagekraft.</strong> Die Ergebnisse "
+"beziehen sich ausschließlich auf Sicherheitsmechanismen, die beim Besuch der "
+"angegebenen Internetadressen von außen beobachtbar sind. Es ist durchaus "
+"möglich, dass ein Betreiber intern zusätzliche Schutzmechanismen einsetzt "
+"und daher auf einige von außen sichtbare Mechanismen verzichtet. Weiterhin "
+"kann es sein, dass auf einzelnen Seiten (z.B. bei der Übertragung von "
+"Passwörtern) zusätzliche Sicherheitsmechanismen eingesetzt werden. Solche "
+"Abweichungen werden in der Auswertung allerdings nicht berücksichtigt. Daher "
+"kann man einerseits aus dem Fehlschlagen einzelner Prüfungen nicht folgern, "
+"dass ein Anbieter nicht ausreichend sorgfältig mit personenbezogenen Daten "
+"umgeht. Auf der anderen Seite ist es allerdings auch möglich, dass eine "
+"Webseite schwere Sicherheitslücken aufweist, obwohl sie ein gutes Ergebnis "
+"erzielt.</p>\n"
+"                "
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:74
+msgid "Configure sorting and grouping"
+msgstr "Konfiguration von Sortierung und Gruppierung"
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:77
+msgid "Sorting and grouping"
+msgstr "Sortierung und Gruppierung"
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:93
+msgid "Configure"
+msgstr "Konfigurieren"
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:106
+msgid "Re-scan all sites now"
+msgstr "Seite erneut scannen"
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:112
+msgid "SCAN IN PROGRESS"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:114
+#, python-format
+msgid ""
+"\n"
+"                %(counter)s site of this list is being scanned at the "
+"moment\n"
+"            "
+msgid_plural ""
+"\n"
+"                %(counter)s sites of this list are being scanned at the "
+"moment\n"
+"            "
+msgstr[0] ""
+"\n"
+"                %(counter)s Seite dieser Liste wird derzeit gescannt\n"
+"            "
+msgstr[1] ""
+"\n"
+"                %(counter)s Seiten dieser Liste werden derzeit gescannt\n"
+"            "
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:123
+#: privacyscore/frontend/templates/frontend/view_site.html:168
+msgid "Refresh Page"
+msgstr "Seite neu laden"
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:127
+msgid "NO SCANS RUNNING"
+msgstr "DERZEIT LAUFEN KEINE SCANS"
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:135
+msgid "Download List as CSV"
+msgstr "Download der Liste als CSV"
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:142
+msgid "INFLUENCING THE RANKING"
+msgstr "DAS RANKING BEEINFLUSSEN"
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:144
+msgid ""
+"You can influence the ranking by your preferences. Use the <i class=\"fa  fa-"
+"angle-double-left\"></i> and <i class=\"fa  fa-angle-double-right\"></i> "
+"arrows to change the importance (left means more important)."
+msgstr ""
+"Sie können das Ranking gemäß Ihre Präferenzen beeinflussen. Benutzen Sie die "
+"Pfeile <i class=\"fa fa-angle-double-left\"></i> und <i class=\"fa fa-angle-"
+"double-right\"></i>, um die Bedeutung zu ändern (links bedeutet wichtiger)."
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:146
+msgid ""
+"At the moment we only provide one ranking scheme that consists of the "
+"following categories: <em>NoTrack</em>, <em>EncWeb</em>, <em>Attacks</em>, "
+"and <em>EncMail</em>. We perform a priorized sort to obtain the ranking: We "
+"<em>start with the first category</em>, sorting the sites according to their "
+"rating:"
+msgstr ""
+"Im Moment bieten wir nur ein einziges Ranking-Schema an, das aus den "
+"folgenden Kategorien besteht: <em>NoTrack</em>, <em>EncWeb</em>, "
+"<em>Attacks</em> und <em>EncMail</em>. Wir führen eine priorisierte "
+"Sortierung durch, um das dargestellte Ranking zu erstellen: Wir <em>starten "
+"mit der ersten Kategorie von links</em> und sortieren die Seiten dann gemäß "
+"ihrer Bewertung:"
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:152
+msgid ""
+"Sites with an identical rating in a category are <em>further sorted "
+"considering the next category to  the right</em>. This procedure is repeated "
+"until all categories have been considered."
+msgstr ""
+"Sites mit identischer Bewertung in einer Kategorie werden <em>weiter "
+"sortiert unter Berücksichtigung der nächsten Kategorie nach rechts</em>. "
+"Dieser Vorgang wird solange wiederholt, bis alle Kategorien berücksichtigt "
+"sind."
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:160
+#, python-format
+msgid "Ranking by attribute “%(group_attr)s”"
+msgstr "Ranking gemäß Attribut „%(group_attr)s“"
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:162
+msgid "Ranking"
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:177
+msgid "Sites excluded from scans"
+msgstr "Von weiteren Scans ausgenommen"
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:182
+msgid ""
+"The owners of these sites have asked us to not perform further scans. For "
+"reasons of transparency we archive the result of the last successful scan in "
+"the table found below. Note that it is possible that site owners have "
+"implemented changes to their site in the meantime, which are not reflected "
+"in these outdated results."
+msgstr ""
+"Die Betreiber der hier aufgeführten Seiten haben uns gebeten, keine weiteren "
+"Scans durchzuführen. Aus Gründen der Transparenz archivieren wir das "
+"Ergebnis des letzten erfolgreichen Scans in der folgenden Tabelle. Beachten "
+"Sie, dass es möglich ist, dass Seitenbetreiber in der Zwischenzeit "
+"Änderungen an ihrer Website vorgenommen haben, die sich nicht in diesen "
+"veralteten Ergebnissen widerspiegeln."
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:189
+msgid ""
+"Site owners can ask us to not perform further scans of their sites. For "
+"reasons of transparency we archive the result of the last successful scan "
+"here."
+msgstr ""
+"Seitenbetreiber können uns bitten, keine weiteren Scans ihrer Websites "
+"durchzuführen. Aus Gründen der Transparenz archivieren wir hier das Ergebnis "
+"des letzten erfolgreichen Scans."
+
+#: privacyscore/frontend/templates/frontend/view_scan_list.html:190
+msgid "No sites are excluded from scans at the moment."
+msgstr "Derzeit sind keine Seiten von Scans ausgenommen."
+
+#: privacyscore/frontend/templates/frontend/view_site.html:128
+msgid "No rating"
+msgstr "Keine Ergebnisse"
+
+#: privacyscore/frontend/templates/frontend/view_site.html:134
+msgid "Invalid URL! The domain name could not be resolved."
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/view_site.html:136
+msgid ""
+"Our scanners failed to reach the website.<br>Either due to connectivity "
+"problems or because our requests are blocked."
+msgstr ""
+
+#: privacyscore/frontend/templates/frontend/view_site.html:138
+msgid "The ratings are not available yet. Please be patient."
+msgstr "Es sind noch keine Ergebnisse verfügbar. Bitte haben Sie Geduld."
+
+#: privacyscore/frontend/templates/frontend/view_site.html:157
+msgid "Re-scan site now"
+msgstr "Seite erneut scannen"
+
+#: privacyscore/frontend/templates/frontend/view_site.html:187
+msgid "Download Results as JSON"
+msgstr "Ergebnisse als JSON-Datei laden"
+
+#: privacyscore/frontend/templates/frontend/view_site.html:201
+msgid ""
+"<b>This site is excluded from further scans.</b> The owner of this website "
+"has asked us to not perform further scans. For reasons of transparency we "
+"display the results of the last scan before we received the request of the "
+"owner. The owner may have implemented changes in the meantime, which are not "
+"reflected in the results below."
+msgstr ""
+"<b>Diese Seite ist von weiteren Scans ausgeschlossen.</b> Der Betreiber "
+"dieser Seite hat uns gebeten, keine weiteren Scans durchzuführen. Aus "
+"Gründen der Transparenz zeigen wir die Ergebnisse des letzten Scans an, "
+"bevor wir die Anfrage des Betreibers erhalten haben. Der Betreiber kann in "
+"der Zwischenzeit Änderungen vorgenommen haben, die sich nicht in den "
+"nachfolgenden Ergebnissen widerspiegeln."
+
+#: privacyscore/frontend/templates/frontend/view_site.html:255
+msgid ""
+"This page shows the result of a machine-generated analysis of a specific "
+"website, which was commissioned by a PrivacyScore user. During the analysis "
+"it was checked whether the privacy of the visitors is protected on a "
+"technical level as well as possible when visiting the given internet "
+"addresses, and whether the operator uses common security mechanisms on the "
+"website. This can indicate how seriously an operator takes data protection. "
+"However, it is not possible to determine the actual security level achieved."
+msgstr ""
+"Auf dieser Seite sehen Sie die Ergebnisse einer maschinell erstellten "
+"Analyse der angegebenen Webseite, die ein Benutzer von PrivacyScore in "
+"Auftrag gegeben hat. Bei der Analyse wurde überprüft, ob beim Besuch der "
+"angegebenen Internetadresse die Privatsphäre der Besucher technisch "
+"möglichst gut geschützt wird und ob der Betreiber auf der Webseite gängige "
+"Sicherheitsmechanismen einsetzt. Dies kann Hinweise darauf geben, wie ernst "
+"ein Betreiber den Datenschutz nimmt. Das tatsächlich erreichte "
+"Sicherheitsniveau lässt sich dadurch allerdings nicht ermitteln."
+
+#: privacyscore/frontend/templates/frontend/view_site.html:259
+msgid ""
+"\n"
+"                        <p><strong>How are the results presented?</strong> "
+"Our analysis focuses on the following aspects: whether tracking services are "
+"used (\"NoTrack\" category), whether selected attacks are prevented, the "
+"quality of encryption during data transmission to the website (EncWeb), and "
+"the quality when sending e-mails to an existing e-mail server (EncMail).</"
+"p>\n"
+"\n"
+"\t                <p><strong>What exactly is checked and what do the results "
+"mean?</strong> We check the internet addresses with several techniques, "
+"which we have described in detail in a <a href=\"https://arxiv.org/"
+"abs/1705.05139\">research paper</a>.</p>\n"
+"\n"
+"\t                <p><strong>What is the purpose of PrivacyScore?</strong> "
+"With PrivacyScore we make websites publicly comparable in terms of selected "
+"properties. As scientists, we are interested in how users and operators deal "
+"with this form of transparency. Among other things, this raises the question "
+"of whether website operators have an additional incentive to improve their "
+"websites.</p>\n"
+"\n"
+"\t                <p><strong>What can be concluded from the results, what "
+"not?</strong></p>\n"
+"\n"
+"\t                <p><strong>No statement on necessity.</strong> The fact "
+"that a web page fails at a specific does not automatically mean that "
+"sensitive pieces data are at risk. Some security mechanisms are only "
+"necessary to protect against strong attacks (e.g., by governments).</p>\n"
+"\n"
+"\t                <p><strong>Limited expressiveness.</strong> The results "
+"cover only security mechanisms that can be observed from outside when "
+"visiting the specified internet addresses. It is quite possible that an "
+"operator uses additional internal protection mechanisms and therefore has "
+"decided to leave out some externally visible mechanisms. Furthermore, it is "
+"possible that additional security mechanisms are used on individual pages (e."
+"g., for the transmission of passwords). However, such variations are not "
+"taken into account in the analysis. Therefore, one cannot conclude from the "
+"failure of individual checks that a provider does not handle personal data "
+"with sufficient care. On the other hand, however, it is also possible that a "
+"website has serious security holes, although it achieves a good result on "
+"this page.</p>\n"
+"\t                "
+msgstr ""
+"\n"
+"                <p><strong>Wie werden die Ergebnisse dargestellt?</strong> "
+"Im einzelnen untersuchen wir, ob Tracking-Dienste verwendet werden "
+"(Kategorie „NoTrack“), ob ausgewählte Angriffe verhindert werden (Attacks) "
+"sowie die Qualität der Verschlüsselung bei der Datenübertragung zur Webseite "
+"(EncWeb) bzw. beim Versand von Mails an einen ggf. vorhandenen E-Mail-Server "
+"(EncMail).</p>\n"
+"\n"
+"                <p><strong>Was genau wird überprüft und was bedeuten die "
+"Ergebnisse?</strong> Wir überprüfen Internetadressen mit mehreren Techniken, "
+"die wir in einem <a href=\"https://arxiv.org/"
+"abs/1705.05139\">Forschungspapier</a> ausführlich beschrieben haben. Eine "
+"Aufstellung der einzelnen Prüfungen und Erklärungen zu deren Relevanz "
+"erhalten Sie, wenn Sie sich das Detailergebnis einer Webseite anzeigen "
+"lassen.</p>\n"
+"\n"
+"                <p><strong>Welchen Zweck hat PrivacyScore?</strong> Mit "
+"PrivacyScore machen wir Webseiten im Hinblick auf ausgewählte Eigenschaften "
+"öffentlich vergleichbar. Als Wissenschaftler interessiert uns, wie Nutzer "
+"und Betreiber mit dieser Form von Transparenz umgehen. Unter anderem stellt "
+"sich die Frage, ob Betreiber von Webseiten dadurch einen zusätzlichen Anreiz "
+"zur Verbesserung ihrer Webseiten haben.</p>\n"
+"\n"
+"                <p><strong>Was kann man aus den Ergebnissen ablesen, was "
+"nicht?</strong></p>\n"
+"\n"
+"                <p><strong>Keine Aussage zur Erforderlichkeit.</strong> Wenn "
+"ein Test bei einer Webseite ein negatives Ergebnis hat, bedeutet das nicht "
+"unbedingt, dass ein Risiko für sensible Daten besteht. Einige "
+"Sicherheitsmechanismen sind lediglich erforderlich, um vor starken Angreifen "
+"(z.B. Regierungen) zu schützen.</p>\n"
+"\n"
+"                <p><strong>Beschränkte Aussagekraft.</strong> Die Ergebnisse "
+"beziehen sich ausschließlich auf Sicherheitsmechanismen, die beim Besuch der "
+"angegebenen Internetadressen von außen beobachtbar sind. Es ist durchaus "
+"möglich, dass ein Betreiber intern zusätzliche Schutzmechanismen einsetzt "
+"und daher auf einige von außen sichtbare Mechanismen verzichtet. Weiterhin "
+"kann es sein, dass auf einzelnen Seiten (z.B. bei der Übertragung von "
+"Passwörtern) zusätzliche Sicherheitsmechanismen eingesetzt werden. Solche "
+"Abweichungen werden in der Auswertung allerdings nicht berücksichtigt. Daher "
+"kann man einerseits aus dem Fehlschlagen einzelner Prüfungen nicht folgern, "
+"dass ein Anbieter nicht ausreichend sorgfältig mit personenbezogenen Daten "
+"umgeht. Auf der anderen Seite ist es allerdings auch möglich, dass eine "
+"Webseite schwere Sicherheitslücken aufweist, obwohl sie ein gutes Ergebnis "
+"erzielt.</p>\n"
+"                "
+
+#: privacyscore/frontend/templates/frontend/view_site.html:424
+#, python-format
+msgid ""
+"\n"
+"                %(counter)s LIST\n"
+"            "
+msgid_plural ""
+"\n"
+"                %(counter)s LISTS\n"
+"            "
+msgstr[0] ""
+msgstr[1] ""
+
+#: privacyscore/frontend/views.py:100
+msgid "For now, lists may not contain more than 500 sites."
+msgstr ""
+
+#: privacyscore/frontend/views.py:190
+#, python-format
+msgid ""
+"Scans for this list have been scheduled. The total number of sites in the "
+"scanning queue is %i (including yours)."
+msgstr ""
+"Die Seite wurde zum Scannen vorgemerkt. Die Gesamtzahl der Sites in der "
+"Warteschlange ist %i (einschließlich dieses Scans)."
+
+#: privacyscore/frontend/views.py:195
+msgid ""
+"All sites have been scanned recently. Please wait 30 minutes and try again."
+msgstr ""
+"Alle Seiten wurden kürzlich gescannt. Bitte warten Sie 30 Minuten und "
+"versuchen Sie es erneut."
+
+#: privacyscore/frontend/views.py:218
+msgid "- None -"
+msgstr ""
+
+#: privacyscore/frontend/views.py:223
+msgid "Sorting direction"
+msgstr "Sortierrichtung"
+
+#: privacyscore/frontend/views.py:224
+msgid "Ascending"
+msgstr "Aufsteigend"
+
+#: privacyscore/frontend/views.py:224
+msgid "Descending"
+msgstr "Absteigend"
+
+#: privacyscore/frontend/views.py:483
+msgid "screenshot does not exist"
+msgstr "es existiert kein Screenshot"
+
+#: privacyscore/frontend/views.py:516
+msgid "(no mx records found or scan not finished)"
+msgstr "(keine MX-Records oder Scan läuft noch)"
+
+#: privacyscore/frontend/views.py:568
+#, python-format
+msgid ""
+"A scan of the site has been scheduled. The total number of sites in the "
+"scanning queue is %i (including yours)."
+msgstr ""
+"Die Seite wurde zum Scannen vorgemerkt. Die Gesamtzahl der Sites in der "
+"Warteschlange ist %i (einschließlich dieses Scans)."
+
+#: privacyscore/frontend/views.py:574
+msgid ""
+"The site is already scheduled for scanning or it has been scanned recently. "
+"No scan was scheduled."
+msgstr ""
+"Die Seite ist bereits zum Scannen eingeplant oder wurde kürzlich gescannt. "
+"Es wurde daher kein neuer Scan zur Warteschlange hinzugefügt."
+
+#: privacyscore/frontend/views.py:577
+msgid ""
+"The operator of this website requested to be blacklisted, scanning this "
+"website is not possible, sorry."
+msgstr ""
+"Der Betreiber dieser Website hat darum gebeten, keine weiteren Scans "
+"durchzuführen. Das Scannen dieser Website ist daher nicht möglich."
