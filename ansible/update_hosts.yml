@@ -274,6 +274,7 @@
         dest: /opt/privacyscore/tests/vendor/testssl.sh
         version: "{{ privacyscore__testssl_version | mandatory }}"
         depth: 1
+
     - name: Refresh vendor/OpenWPM
       when: privacyscore__is_slave
       become: yes
