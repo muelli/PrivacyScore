@@ -3293,7 +3293,7 @@ CHECKS['mx']['mx_ocsp_stapling']['labels'] = \
 CHECKS['ssl']['web_ocsp_stapling']['labels'] = ['reliable']
 
 CHECKS['mx']['mx_ocsp_must_staple']['title'] = \
-CHECKS['ssl']['web_ocsp_must_staple']['title'] = "Check whether certificate contains \"must staple\" extensioN"
+CHECKS['ssl']['web_ocsp_must_staple']['title'] = "Check whether certificate contains \"must staple\" extension"
 CHECKS['mx']['mx_ocsp_must_staple']['longdesc'] = \
 CHECKS['ssl']['web_ocsp_must_staple']['longdesc'] = """<p>OCSP stapling on its own does not protect against active man-in-the-middle attackers that block the OCSP request. Browsers cannot distinguish these attacks from legitimate behavior. The OCSP must staple extension mitigates this problem by extending the server certificate with a signed statement that indicates that the server will perform OCSP stapling. This check tests whether the certificate contains this statement.</p>
 <p><strong>Conditions for passing:</strong>Test passes if the certificate contains the OCSP must staple extension, otherwise it fails. The check result will be \"critical\" if the certificate contains the must staple extension, but the server does not perform OCSP stapling.</p>
