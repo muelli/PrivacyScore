@@ -1759,12 +1759,12 @@ CHECKS['mx']['mx_testssl_incomplete'] = {
 # no: Nothing
 # yes: notify, neutral
 CHECKS['mx']['mx_scan_finished'] = {
-    'keys': {'mx_ssl_finished', 'mx_has_ssl'},
+    'keys': {'mx_records', 'mx_ssl_finished', 'mx_has_ssl'},
     'rating': lambda **keys: {
         'description': _('The server does not offer encrypted connections (STARTTLS).'),
         'classification': Rating('critical'),
         'details_list': None,
-    } if keys['mx_ssl_finished'] and not keys['mx_has_ssl'] else None,
+    } if keys['mx_records'] and keys['mx_ssl_finished'] and not keys['mx_has_ssl'] else None,
     'missing': {
         'description': _('The testssl scan experienced a problem and had to be aborted, some checks were not performed.'),
         'classification': Rating('neutral', devaluates_group=True),
